@@ -14,7 +14,6 @@ header {
     height: 191px;
     left: 303.54px;
     top: 0px;
-    background-color: rgba(0, 0, 255, 0.096);
 }
 
 aside {
@@ -24,7 +23,7 @@ aside {
     height: 100%;
     top: 0px;
     left: 0px;
-    background-color: bisque;
+    background-color: #B1B2B6;
 }
 
 main {
@@ -34,7 +33,6 @@ main {
     height: 3033.89px;
     left: 303.54px;
     top: 0px;
-    background-color: rgba(7, 161, 27, 0.144);
 }
 
 footer {
@@ -44,7 +42,7 @@ footer {
     height: 321,53px;
     top: 0px;
     left: 303.54px;
-    background-color: rgba(0, 255, 255, 0.13);
+    background-color: #5F6085;
 }
 
 div.what-is-trackgenix {
@@ -60,35 +58,32 @@ div.our-story {
 
 section.features {
     position: absolute;
-    margin: 2243.31px 17.24px 2078.3px 62.21px;
+    margin: 716.62px 62.46px 2078.3px 49.35px;
 }
 
-section.why-trackgenix-1 {
+div.why-trackgenix-1 {
     position: absolute;
-    margin: 1354.31px  75.7px 1756.27px 615.32px;
+    margin: 1256.25px  191.87px 1434.74px 615.32px;
 }
 
-section.why-trackgenix-2 {
+div.why-trackgenix-2 {
     position: absolute;
-    margin: 1684.08px  647.55px 1519.43px 159.64px;
+    margin: 1493.08px  647.09px 1197.9px 160.1px;
 }
 
-section.why-trackgenix-3 {
+div.why-trackgenix-3 {
     position: absolute;
-    margin: 1920.92px  75.7px 1282.6px 615.32px;
+    margin: 1729.92px  191.87px 961.07px 615.32px;
 }
 
-section.why-trackgenix-4 {
+div.why-trackgenix-4 {
     position: absolute;
-    margin: 2157.75px  647.55px 1045.76px 159.64px;
+    margin: 1966.75px  647.09px 724.23px 160.1px;
 }
 
 section.contact-us {
     position: absolute;
-    margin: 2434.31px 34.14px 64.5px 80.94px;
-    margin-top: 2434.31px;
-    margin-left: 80.94px;
-    margin-right: 34.14px;
+    margin: 2243.31px 62.46px 64.5px 49.35px;
 }
 
 /*H1, H2 styles*/
@@ -106,7 +101,8 @@ h2 {
 }
 
 h2.why-trackgenix {
-    margin: 1354.31px 39.13px 1950.89px 80.94px;
+    position: absolute;
+    margin: 1163.31px 62.46px 1629.37px 49.35px;
     text-transform: uppercase;
 }
 
@@ -120,7 +116,7 @@ img.what-is-trackgenix {
     position: absolute;
     width: 513.39px;
     height: 312.71px;
-    margin: 11.72px 82.44px 2839.98px 539.62px;
+    margin: 11.72px 82.44px 2518.45px 539.62px;
     border-radius: 23px;
     border: 1px #373867;
     
@@ -128,7 +124,7 @@ img.what-is-trackgenix {
 
 img.our-story {
     position: absolute;
-    margin: 373.68px 633.3px 2574.96px 67.45px;
+    margin: 373.68px 633.3px 2253.43px 67.45px;
     width: 434.71px;
     height: 215.78px;
     border-radius: 23px;
@@ -138,31 +134,32 @@ img.our-story {
 
 img.why-trackgenix-1 {
     position: absolute;
-    margin: 1447.25px  918.86px 1756.27px 191.87px;
-    left: 67.45px;
+    margin: 1245.75px  599.12px 1424.76px 124.12px;
+    width: 412.21px;
+    height: 172.38px;
     border-radius: 23px;
-    border: 1px #373867;
 }
 
 img.why-trackgenix-2 {
     position: absolute;
-    margin: 1673.59px 573.35px 1509.45px 149.9px;
+    margin: 1482.59px 149.9px 1187.92px 573.35px;
+    width: 412.21px;
+    height: 172.38px;
     border-radius: 23px;
-    border: 1px #373867;
-    
 }
 
 img.why-trackgenix-3 {
     position: absolute;
-    margin: 1684.08px  647.55px 1519.43px 159.64px;
+    margin: 1719.42px  599.12px 951.09px 124.12px;
+    width: 412.21px;
+    height: 172.38px;
     border-radius: 23px;
-    border: 1px #373867;
-    
 }
 
 img.why-trackgenix-4 {
     position: absolute;
-    padding: 2147.26px 573.35px 1035.78px 149.9px;
+    margin: 1956.26px 149.9px 714.25px 573.35px;
+    width: 412.21px;
+    height: 172.38px;
     border-radius: 23px;
-    border: 1px #373867;
 }
