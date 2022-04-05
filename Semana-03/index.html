@@ -13,6 +13,10 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
     <link rel="icon" href="img/logo.ico">
+    <link rel="stylesheet" 
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" 
+        integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" 
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" type="text/css" href="css/reset.css" />
     <link rel="stylesheet" type="text/css" href="css/style.css" />
     <title>Trackgenix</title>
@@ -20,7 +24,6 @@
 <body>
     <header>
         <h1>Trackgenix SA</h1>
-        <div class="line"></div>
     </header>
     <main>
         <section id="homepage">
@@ -52,14 +55,13 @@
                         an unknown printer took a galley of type and scrambled it 
                         to make a type specimen book.     
                     </p>
-                    <div><a class="button-our-story-style" href="">Learn more</a></div>
+                    <button class="our-story-style" href="">Learn more</button>
                 </div>
                 <img class="our-story" src="img/image2.png" alt="Figma image">
             </div>
         </section>
         <section class="features">
             <h2 class="features">Features</h2>
-            <div class="line"></div>
             <p>
                 Lorem ipsum dolor sit, amet consectetur adipisicing elit. 
                 Aut minima provident illum sit, expedita consequatur error, alias 
@@ -75,7 +77,6 @@
         </section>
         <section id="why-trackgenix">
             <h2 class="why-trackgenix">Why trackgenix?</h2>
-            <div class="line"></div>
             <div class="why-trackgenix-1">
                 <img class="why-trackgenix-1" src="img/image3.png" alt="Figma image"> 
                 <div class="why-trackgenix-1-text">
@@ -85,7 +86,7 @@
                     Aut explicabo dolorem molestias maxime sapiente vitae enim 
                     minima provident illum sit.
                     </p>
-                    <a class="button-why-trackgenix-style" href="">Learn more</a>
+                    <button class="why-trackgenix-style" href="">Learn more</button>
                 </div>
             </div>
             <div class="why-trackgenix-2">
@@ -97,7 +98,7 @@
                     Aut explicabo dolorem molestias maxime sapiente vitae enim 
                     minima provident illum sit.
                     </p>
-                    <a class="button-why-trackgenix-style" href="">Learn more</a>
+                    <button class="why-trackgenix-style" href="">Learn more</button>
                 </div>
             </div>
             <div class="why-trackgenix-3">
@@ -109,7 +110,7 @@
                     Aut explicabo dolorem molestias maxime sapiente vitae enim 
                     minima provident illum sit.
                     </p>
-                    <a class="button-why-trackgenix-style" href="">Learn more</a>
+                    <button class="why-trackgenix-style" href="">Learn more</button>
                 </div>
             </div>
             <div class="why-trackgenix-4">
@@ -121,26 +122,25 @@
                     Aut explicabo dolorem molestias maxime sapiente vitae enim 
                     minima provident illum sit.
                     </p>
-                    <a class="button-why-trackgenix-style" href="">Learn more</a>
+                    <button class="why-trackgenix-style" href="">Learn more</button>
                 </div>
             </div>
         </section>
         <section class="contact-us" id="contact-us">
             <h2 class="contact-us">Contact us</h2>
-            <div class="line"></div>
             <form class="contact-us">
                 <label class="block">Name</label>
                 <input class="contact-us" class="block" type="text" placeholder="Insert your name">
                 <label class="block">Email</label>
                 <input class="contact-us" class="block" type="email" placeholder="Insert your mail">
                 <label class="block">Category:</label>
-                <select class="block">
+                <select class="contact-us" class="block">
                     <option>Quality Assurance</option>
                     <option>Developer</option>
                     <option>Project Manager</option>
                     <option>Human Resources</option>
                 </select> 
-                <textarea class="block" cols="20" rows="10" placeholder="Write us a message..."></textarea>
+                <textarea class="contact-us" class="block" cols="20" rows="10" placeholder="Write us a message..."></textarea>
                 <input class="send-message-button-style" type="submit" value="Send Message">
                 <input class="reset-button-style" type="reset" value="Reset">
             </form>
@@ -150,14 +150,13 @@
         <nav>
             <form class="nav">
                 <div>
-                    <input class="search" type="text" placeholder="Search">
+                    <input type="search" class="search" placeholder="Search                     ">
                 </div>
                     <input class="log-in-button-style" type="button" value="Log in">
                     <input class="sign-in-button-style" type="button" value="Sign up">
             </form>
             <div class="menu">
                 <h4 class="menu">Menu</h4>
-                <div class="line"></div>
                 <ul>
                     <li><a class="menu" href="#homepage">Homepage</a></li>
                     <li><a class="menu" href="#why-trackgenix">Generic</a></li>
@@ -177,32 +176,34 @@
     <footer>
         <section>
             <h3 class="trackgenix">Trackgenix</h3>
-            <div class="products">
-                <p class="footer">Products</p>
-                <ol>
-                    <li>Features</li>
-                    <li>Downloads</li>
-                    <li>Integrations</li>
-                    <li>Extras</li>
-                </ol>
-            </div>
-            <div class="company">
-                <p class="footer">Company</p>
-                <ol>
-                    <li>About us</li>
-                    <li>Clients</li>
-                    <li>Resources</li>
-                    <li>Blog</li>
-                </ol>
-            </div>
-            <div class="suport">
-                <p class="footer">Suport</p>
-                <ol>
-                    <li>Help</li>
-                    <li>Tutorials</li>
-                    <li>API</li>
-                    <li>Contact</li>
-                </ol>
+            <div class="trackgenix-footer">
+                <div class="products">
+                    <p class="footer">Products</p>
+                    <ol>
+                        <li>Features</li>
+                        <li>Downloads</li>
+                        <li>Integrations</li>
+                        <li>Extras</li>
+                    </ol>
+                </div>
+                <div class="company">
+                    <p class="footer">Company</p>
+                    <ol>
+                        <li>About us</li>
+                        <li>Clients</li>
+                        <li>Resources</li>
+                        <li>Blog</li>
+                    </ol>
+                </div>
+                <div class="suport">
+                    <p class="footer">Suport</p>
+                    <ol>
+                        <li>Help</li>
+                        <li>Tutorials</li>
+                        <li>API</li>
+                        <li>Contact</li>
+                    </ol>
+                </div>
             </div>
         </section>
         <div class="social-media">
