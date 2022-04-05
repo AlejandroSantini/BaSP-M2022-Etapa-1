@@ -1,10 +1,9 @@
 body {
-    font-size: 20px;
+    font-size: 14.99px;
     color: #373867;
-    width: 100%;
     font-family: 'Roboto', sans-serif;
+    line-height: 22px;
 }
-
 
 /*Containers*/
 header {
@@ -17,12 +16,11 @@ header {
 }
 
 aside {
-    overflow: hidden;
     position: fixed;
+    left: 0px;
+    top: 0px;
     width: 303.54px;
     height: 100%;
-    top: 0px;
-    left: 0px;
     background-color: #B1B2B6;
 }
 
@@ -32,134 +30,384 @@ main {
     width: 1135.46px;
     height: 3033.89px;
     left: 303.54px;
-    top: 0px;
 }
 
 footer {
-    overflow: hidden;
     position: relative;
+    overflow: hidden;
     width: 1135.46px;
     height: 321,53px;
-    top: 0px;
     left: 303.54px;
     background-color: #5F6085;
+    color: #ffffff;
 }
 
-div.what-is-trackgenix {
-    position: absolute;
-    margin: 0px 640.06px 2870.25px 65.45px;   
+form.nav {
+    text-align: center;
 }
-
-div.our-story {
-    position: absolute;
-    margin: 372.35px 82.44px 2589.16px 539.62px;
-}
-
 
 section.features {
-    position: absolute;
-    margin: 716.62px 62.46px 2078.3px 49.35px;
-}
-
-div.why-trackgenix-1 {
-    position: absolute;
-    margin: 1256.25px  191.87px 1434.74px 615.32px;
-}
-
-div.why-trackgenix-2 {
-    position: absolute;
-    margin: 1493.08px  647.09px 1197.9px 160.1px;
-}
-
-div.why-trackgenix-3 {
-    position: absolute;
-    margin: 1729.92px  191.87px 961.07px 615.32px;
-}
-
-div.why-trackgenix-4 {
-    position: absolute;
-    margin: 1966.75px  647.09px 724.23px 160.1px;
+    display: inline-block;
+    text-align: justify;
+    margin: 4% 7% 10% 7%;
 }
 
 section.contact-us {
-    position: absolute;
-    margin: 2243.31px 62.46px 64.5px 49.35px;
+    display: inline-block;
+    margin: 10% 7% 10% 7%;
+    line-height: 30px;
+}
+
+div.what-is-trackgenix {
+    display: inline-block;
+    text-align: justify; 
+    margin-left:7%;
+    margin-right: 7%;
+}
+
+div.our-story {
+    display: inline-block;
+    text-align: justify;
+    margin: 2% 7% 2% 7%;
+}
+
+div.what-is-trackgenix-text {
+    display: inline-block;
+    margin: 2% 2% 2% 0%;
+    width: 45%;
+}
+
+div.our-story-text {
+    display: inline-block;
+    margin: 2% 0% 2% 4%;
+    width: 45%;
+}
+
+div.why-trackgenix-1 {
+    display: inline-block;
+    margin: 4% 7% 0% 7%;
+}
+
+div.why-trackgenix-2 {
+    display: inline-block;
+    margin: 4% 7% 0% 7%;
+}
+
+div.why-trackgenix-3 {
+    display: inline-block;
+    margin: 4% 7% 0% 7%;
+}
+
+div.why-trackgenix-4 {
+    display: inline-block;
+    margin: 4% 7% 0% 7%;
+}
+
+div.why-trackgenix-1-text {
+    display: inline-block;
+    text-align: center;
+    margin: 4% 2% 4% 5%;
+    width: 45%;
+}
+
+div.why-trackgenix-2-text {
+    display: inline-block;
+    text-align: center;
+    margin: 4% 5% 4% 2%;
+    width: 45%;
+}
+
+div.why-trackgenix-3-text {
+    display: inline-block;
+    text-align: center;
+    margin: 4% 2% 4% 5%;
+    width: 45%;
+}
+
+div.why-trackgenix-4-text {
+    display: inline-block;
+    text-align: center;
+    margin: 4% 5% 4% 2%;
+    width: 45%;
+}
+
+div.menu {
+    line-height: 20px;
+    margin: 20% 7% 0% 7%;
+}
+
+div.get-in-touch {
+    line-height: 20px;
+    margin: 100% 7% 0% 7%;
+}
+
+div.social-media {
+    text-align: center;
+}
+
+div.products {
+    display: inline-block;
+    width: 20%;
+}
+
+div.company {
+    display: inline-block;
+    width:20%;
+}
+
+div.suport {
+    display: inline-block;
+    width:20%;
+}
+
+p.footer {
+    font-weight: bold;
+}
+
+p.features-bold {
+    display: inline-block;
+    font-weight: bold;
 }
 
 /*H1, H2 styles*/
+
 h1 {
-    position: absolute;
-    margin-top: 73,45px;
-    margin-left: 62.46px;
-    font-size: 80px;
+    margin: 7% 7% 7% 7%;
+    font-size: 60px;
     font-weight: bold;
 }
 
 h2 {
-    font-size: 40px;
+    font-size: 30px;
     font-weight: bold;
 }
 
-h2.why-trackgenix {
-    position: absolute;
-    margin: 1163.31px 62.46px 1629.37px 49.35px;
-    text-transform: uppercase;
+ul.features {
+    margin: 7px 0px 0px 7%;
 }
 
 h2.homepage {
     color: #49A37B;
+    margin-bottom: 14.24px;
+
+}
+
+h2.features {
+    margin-bottom: 3%;
+    text-transform: uppercase;
+}
+
+h2.why-trackgenix {
+    margin-left: 7%;
+    text-transform: uppercase;
+}
+
+h2.contact-us {
+    margin-bottom: 5%;
+    text-transform: uppercase;    
+}
+
+h3 {
+    font-weight: bold;
+    margin: ;
+}
+
+h3.trackgenix {
+    display: inline-block;
+    text-transform: uppercase;
+    margin: 100px 0px 0px 60px;
+}
+
+h4.menu, h4.get-in-touch {
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+/*-----------Buttons----------*/
+
+a {
+    text-decoration: none;
+}
+
+a.button-our-story-style {
+    display: inline-block;
+    font-size: 8.99px;
+    margin-top: 11.43px;
+    padding: 8px, 18px, 8px, 18px;
+    background-color: #AACE9B;
+    color: #373867;
+    border-radius: 5px;
+    text-align: center;
+}
+
+a.button-why-trackgenix-style {
+    display: inline-block;
+    font-size: 8.99px;
+    padding: 8px, 18px, 8px, 18px;
+    background-color: #AACE9B;
+    color: #373867;
+    border-radius: 5px;
+    align-items: center;
+}
+
+input.search {
+    display: inline-block;
+    padding: 10px 20px 10px 20px;
+    margin: 8% 7% 7% 7%;
+    font-size:18px;
+}
+
+input.log-in-button-style {
+    display: inline-block;
+    text-transform: uppercase;  
+    font-size:11.99px;
+    padding: 10px 20px 10px 20px;
+    text-decoration: none;
+    background-color: #49A37B;
+    border: none;
+    border-radius: 11.24px;
+    color: #ffffff;
+}
+
+input.sign-in-button-style {
+    display: inline-block;
+    text-transform: uppercase;
+    font-size:11.99px;
+    padding: 10px 30px 10px 30px;
+    font-size:11.99px;
+    border: none;
+    background-color: #56577C;
+    border-radius: 11.24px;
+    text-decoration: none;
+    color: #ffffff;
+}
+
+input {
+    text-decoration: none;
+}
+
+input.send-message-button-style {
+    display: inline-block;
+    font-size:11.99px;
+    padding: 5px 15px 5px 15px;
+    background-color: #AACE9B;
+    border: none;
+    border-radius: 5px;
+    color: #373867;
+}
+
+input.reset-button-style {
+    display: inline-block;
+    font-size:11.99px;
+    padding: 5px 15px 5px 15px;
+    background-color: #DADADA;
+    border: none;
+    border-radius: 5px;
+    color: #373867;
+}
+
+input.contact-us {
+    display: inline-block;
+    width: 100%;
 }
 
 /*Images styles*/
 
 img.what-is-trackgenix {
-    position: absolute;
-    width: 513.39px;
-    height: 312.71px;
-    margin: 11.72px 82.44px 2518.45px 539.62px;
+    display: inline-block;
+    float: right;
+    width: 51%;
     border-radius: 23px;
     border: 1px #373867;
-    
 }
 
 img.our-story {
-    position: absolute;
-    margin: 373.68px 633.3px 2253.43px 67.45px;
-    width: 434.71px;
-    height: 215.78px;
+    display: inline-block;
+    float: left;
+    width: 45%;
     border-radius: 23px;
-    border: 1px #373867;
-    
+    border: 1px #373867;  
 }
 
 img.why-trackgenix-1 {
-    position: absolute;
-    margin: 1245.75px  599.12px 1424.76px 124.12px;
-    width: 412.21px;
-    height: 172.38px;
+    display: inline-block;
+    float: left;
+    width: 48%;
     border-radius: 23px;
 }
 
 img.why-trackgenix-2 {
-    position: absolute;
-    margin: 1482.59px 149.9px 1187.92px 573.35px;
-    width: 412.21px;
-    height: 172.38px;
+    display: inline-block;
+    float: right;
+    width: 48%;
     border-radius: 23px;
 }
 
 img.why-trackgenix-3 {
-    position: absolute;
-    margin: 1719.42px  599.12px 951.09px 124.12px;
-    width: 412.21px;
-    height: 172.38px;
+    display: inline-block;
+    float: left;
+    width: 48%;
     border-radius: 23px;
 }
 
 img.why-trackgenix-4 {
-    position: absolute;
-    margin: 1956.26px 149.9px 714.25px 573.35px;
-    width: 412.21px;
-    height: 172.38px;
+    display: inline-block;
+    float: right;
+    width: 48%;
     border-radius: 23px;
+}
+
+.block {
+    display: block;
+}
+
+.line {
+    display: block;
+    margin: 0% 7% 0% 7%;
+    border-bottom: 5px solid #373867;
+}
+
+a:visited {
+    color: #373867;
+}
+
+a.menu:hover, a.get-in-touch:hover {
+    font-weight: bold;
+}
+
+a.menu:active, a.get-in-touch:active {
+    font-weight: bold;
+    color: #3738679a;
+}
+
+a.button-our-story-style:hover, a.button-why-trackgenix-style:hover, input.send-message-button-style:hover {
+    background-color: #aace9bb7;
+}
+
+a.button-our-story-style:active, a.button-why-trackgenix-style:active, input.send-message-button-style:active {
+    background-color: #aace9b67;
+}
+
+input.reset-button-style:hover {
+    background-color: #37386756;
+}
+
+input.reset-button-style:active {
+    background-color: #37386734;
+}
+
+input.log-in-button-style:hover {
+    background-color: #49a37a80;
+}
+
+input.log-in-button-style:active {
+    background-color: #49a37a3a;
+}
+
+input.sign-in-button-style:hover {
+    background-color: #37386765;
+}
+
+input.sign-in-button-style:active {
+    background-color: #37386727;
 }
