@@ -13,6 +13,11 @@ h1 {
     font-weight: bold;
 }
 
+h2 {
+    font-size: 30px;
+    font-weight: bold;
+}
+
 h3 {
     font-weight: bold;
 }
@@ -56,11 +61,6 @@ footer {
 }
 
 /*--------------main------------*/
-
-h2 {
-    font-size: 30px;
-    font-weight: bold;
-}
 
 h2.features {
     margin-bottom: 3%;
@@ -394,7 +394,7 @@ a.social-media {
     font-size: 18px;
 }
 
-/*H1, H2 styles*/
+/*---------------pseudoclass---------------*/
 
 a:visited {
     color: #373867;
