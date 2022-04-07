@@ -1,0 +1,29 @@
+main.flex-container{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: space-around;
+    width: 80%;
+}
+
+section.flex-homepage {
+    display: flex;
+    flex-wrap: wrap;
+    background-color: aquamarine;
+}
+
+section.flex-features {
+    display: flex;
+    background-color: rgb(28, 167, 231)
+}
+
+section.flex-why-trackgenix {
+    display: flex;
+    flex-wrap: wrap;
+    background-color: rgb(231, 28, 153)
+}
+
+section.flex-contact-us {
+    display: flex;
+    background-color: rgb(231, 211, 28)
+}

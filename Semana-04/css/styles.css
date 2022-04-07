@@ -1,0 +1,24 @@
+body {
+    font-size: 15px;
+    color: #373867;
+    font-family: 'Roboto', sans-serif;
+    line-height: 22px;
+}
+
+h2 {
+    font-size: 30px;
+    font-weight: bold;
+}
+
+h3 {
+    font-weight: bold;
+}
+
+a {
+    text-decoration: none;
+}
+
+input {
+    text-decoration: none;
+    font-family: 'Roboto', sans-serif;
+}
