@@ -2,15 +2,16 @@ header.flex-container {
     display: flex;
     justify-content: center;
     width: 100%;
-    height: 150px;
+    height: 120px;
+    
 }
 
 h1.flex-item{
     display: flex;
     justify-content: center;
     align-items: center;
+    min-width: 95%;
     border-bottom: 5px solid #373867; 
-    font-size: 60px;
+    font-size: 50px;
     font-weight: bold;
-    width: 80%;
-    margin-bottom: 28px;
+    margin-bottom: 30px;

@@ -1,29 +1,144 @@
 main.flex-container{
     display: flex;
     flex-wrap: wrap;
-    flex-direction: column;
-    justify-content: space-around;
-    width: 80%;
 }
 
-section.flex-homepage {
+/*----------HOMEPAGE----------*/
+
+section.flex-item {
     display: flex;
     flex-wrap: wrap;
-    background-color: aquamarine;
 }
 
-section.flex-features {
-    display: flex;
-    background-color: rgb(28, 167, 231)
+section.flex-item:nth-child(1) {
+    background-color: rgba(0, 255, 255, 0.452);
+    text-align: center;
 }
 
-section.flex-why-trackgenix {
+div.flex-what-is-trackgenix {
     display: flex;
     flex-wrap: wrap;
-    background-color: rgb(231, 28, 153)
+    justify-content: center;
+}   
+
+div.flex-what-is-trackgenix-text {
+    width: 48%;
+    min-width: 470px;
+    margin: 10px;
 }
 
-section.flex-contact-us {
+img.flex-what-is-trackgenix {
+    width: 48%;
+    border-radius: 10px;
+    min-width: 470px;
+    margin: 10px;
+}
+
+div.flex-our-story {
     display: flex;
-    background-color: rgb(231, 211, 28)
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+div.flex-our-story-text {
+    width: 48%;
+    min-width: 470px;
+    margin: 10px;
+}
+
+img.flex-our-story {
+    width: 48%;
+    border-radius: 10px;
+    min-width: 470px;
+    margin: 10px;
+}
+
+/*----------FEATURES-----------*/
+
+section.flex-item:nth-child(2) {
+    display: flex;
+    justify-content: center;
+    background-color: rgba(0, 255, 55, 0.452);
+
+}
+
+h2.features {
+    text-align: center;
+    min-width: 95%;
+    margin-bottom: 5px;
+    padding-top: 10px;
+    padding-bottom: 12px;  
+    border-bottom: 5px solid #373867; 
+    text-transform: uppercase;
+}
+p.features{
+    padding: 2px 2.5% 5px 2.5%;
+}
+
+ul.features {
+    display: inline-block;
+    padding: 2px 6% 5px 6%;
+}
+
+p.features-bold {
+    display: inline-block;
+    font-weight: bold;
+}
+
+/*--------WHY TRACKGENIX--------*/
+
+section.flex-item:nth-child(3) {
+    background-color: rgba(255, 0, 255, 0.384);
+    text-align: center;
+    justify-content: center;
+}
+
+h2.why-trackgenix {
+    text-align: center;
+    min-width: 95%;
+    margin-bottom: 10px;
+    padding-bottom: 12px;
+    padding-top: 10px; 
+    border-bottom: 5px solid #373867;
+    text-transform: uppercase; 
+}
+
+div.flex-why-trackgenix {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+div.flex-why-trackgenix:nth-child(odd) {
+    
+}
+img.why-trackgenix {
+    width: 48%;
+    border-radius: 10px;
+    min-width: 470px;
+    margin: 10px;
+}
+
+div.why-trackgenix-text {
+    width: 48%;
+    min-width: 470px;
+    margin: 10px;
+}
+
+/*---------CONTACT US-----------*/
+
+section.flex-item:nth-child(4) {
+    background-color: rgba(229, 255, 0, 0.507);
+    justify-content: center;
+    text-align: center;
+}
+
+h2.contact-us {
+    text-align: center;
+    min-width: 95%;
+    margin-bottom: 10px;
+    padding-bottom: 12px;
+    padding-top: 10px; 
+    border-bottom: 5px solid #373867;
+    text-transform: uppercase; 
 }

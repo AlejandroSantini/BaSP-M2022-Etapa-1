@@ -1,8 +1,12 @@
 body {
+    display: flex;
+    flex-flow: row wrap;
     font-size: 15px;
     color: #373867;
     font-family: 'Roboto', sans-serif;
     line-height: 22px;
+    margin: 15px;
+    justify-content: center;
 }
 
 h2 {
