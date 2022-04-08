@@ -1,6 +1,8 @@
 main.flex-container{
     display: flex;
     flex-wrap: wrap;
+    margin-right: 15px;
+    margin-left: 15px;
 }
 
 /*----------HOMEPAGE----------*/
@@ -11,8 +13,12 @@ section.flex-item {
 }
 
 section.flex-item:nth-child(1) {
-    background-color: rgba(0, 255, 255, 0.452);
     text-align: center;
+}
+
+h2.homepage {
+    margin-bottom: 14.24px;
+    color: #49A37B;
 }
 
 div.flex-what-is-trackgenix {
@@ -53,13 +59,23 @@ img.flex-our-story {
     margin: 10px;
 }
 
+button.our-story-style {
+    margin-top: 10px;
+    padding: 6px 8px;
+    background-color: #AACE9B;
+    border: none;
+    border-radius: 5px;
+    text-align: center;
+    font-size: 12px;
+    color: #373867;
+}
+
 /*----------FEATURES-----------*/
 
 section.flex-item:nth-child(2) {
     display: flex;
     justify-content: center;
-    background-color: rgba(0, 255, 55, 0.452);
-
+    margin-top: 15px;
 }
 
 h2.features {
@@ -88,9 +104,9 @@ p.features-bold {
 /*--------WHY TRACKGENIX--------*/
 
 section.flex-item:nth-child(3) {
-    background-color: rgba(255, 0, 255, 0.384);
     text-align: center;
     justify-content: center;
+    margin-top: 20px;
 }
 
 h2.why-trackgenix {
@@ -107,11 +123,14 @@ div.flex-why-trackgenix {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+    padding: 7px 0px 7px 0px;
+    border-bottom: 1px solid #373867;
 }
 
 div.flex-why-trackgenix:nth-child(odd) {
     
 }
+
 img.why-trackgenix {
     width: 48%;
     border-radius: 10px;
@@ -125,12 +144,24 @@ div.why-trackgenix-text {
     margin: 10px;
 }
 
+button.why-trackgenix-style {
+    margin-top: 10px;
+    padding: 6px 8px;
+    background-color: #AACE9B;
+    border: none;
+    border-radius: 5px;
+    text-align: center;
+    font-size: 12px;
+    color: #373867;
+}
 /*---------CONTACT US-----------*/
 
 section.flex-item:nth-child(4) {
-    background-color: rgba(229, 255, 0, 0.507);
     justify-content: center;
     text-align: center;
+    width: 100%;
+    margin-bottom: 15px;
+    margin-top: 20px;
 }
 
 h2.contact-us {
@@ -141,4 +172,63 @@ h2.contact-us {
     padding-top: 10px; 
     border-bottom: 5px solid #373867;
     text-transform: uppercase; 
+}
+
+section.contact-us {
+    text-align: center;
+    line-height: 30px;
+}
+
+input.contact-us {
+    display: block;
+    width: 400px;
+    margin: 1px 0px 12px 0px;
+    padding: 10px;
+    border: 0.60px solid #37386733;
+    border-radius: 3px;
+    font-size: 15px;
+}
+
+select.contact-us {
+    display: block;
+    width: 422px;
+    margin: 1px 0px 12px 0px;
+    padding: 10px;
+    border: 0.60px solid #37386733;
+    border-radius: 3px;
+    font-family: 'Roboto', sans-serif;
+    font-size: 15px;
+    color: #757575;
+}
+
+textarea.contact-us {
+    display: block;
+    min-width: 400px;
+    padding: 10px;
+    margin: 18px 0px 12px 0px;
+    border: 0.60px solid #37386733;
+    border-radius: 3px;
+    font-family: 'Roboto', sans-serif;
+    font-size: 15px;
+}
+
+input.send-message-button-style {
+    padding: 11px 22px 11px 22px;
+    background-color: #AACE9B;
+    border: none;
+    border-radius: 5px;
+    font-size:11.99px;
+    font-weight: bold;
+    color: #58587E;
+}
+
+input.reset-button-style {
+    margin-left: 3px;
+    padding: 11px 22px 11px 22px;
+    background-color: #DADADA;
+    border: none;
+    border-radius: 5px;
+    font-size:11.99px;
+    font-weight: bold;
+    color: #58587E;
 }

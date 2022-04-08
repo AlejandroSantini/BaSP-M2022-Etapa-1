@@ -5,7 +5,6 @@ body {
     color: #373867;
     font-family: 'Roboto', sans-serif;
     line-height: 22px;
-    margin: 15px;
     justify-content: center;
 }
 
@@ -25,4 +24,60 @@ a {
 input {
     text-decoration: none;
     font-family: 'Roboto', sans-serif;
+}
+
+label {
+    display: flex;
+    font-weight: bold;
+    align-items: flex-start;
+    padding-left: 10px;
+}
+
+a:visited {
+    color: #373867;
+}
+
+a:link {
+    color: #373867;
+}
+
+a.menu:hover, a.get-in-touch:hover {
+    font-weight: bold;
+}
+
+a.menu:active, a.get-in-touch:active {
+    font-weight: bold;
+    color: #3738679a;
+}
+
+button.our-story-style:hover, button.why-trackgenix-style:hover, input.send-message-button-style:hover {
+    background-color: #aace9b86;
+}
+
+button.our-story-style:active, button.why-trackgenix-style:active, input.send-message-button-style:active {
+    background-color: #aace9b67;
+}
+
+input.reset-button-style:hover {
+    background-color: #37386756;
+}
+
+input.reset-button-style:active {
+    background-color: #37386734;
+}
+
+input.log-in-button-style:hover {
+    background-color: #49a37a80;
+}
+
+input.log-in-button-style:active {
+    background-color: #49a37a3a;
+}
+
+input.sign-in-button-style:hover {
+    background-color: #37386765;
+}
+
+input.sign-in-button-style:active {
+    background-color: #37386727;
 }
