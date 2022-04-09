@@ -29,15 +29,15 @@ div.flex-what-is-trackgenix {
 
 div.flex-what-is-trackgenix-text {
     width: 48%;
-    min-width: 470px;
     margin: 10px;
+    min-width: 300px;
 }
 
 img.flex-what-is-trackgenix {
     width: 48%;
     border-radius: 10px;
-    min-width: 470px;
     margin: 10px;
+    min-width: 300px;
 }
 
 div.flex-our-story {
@@ -48,14 +48,14 @@ div.flex-our-story {
 
 div.flex-our-story-text {
     width: 48%;
-    min-width: 470px;
+    min-width: 300px;
     margin: 10px;
 }
 
 img.flex-our-story {
     width: 48%;
     border-radius: 10px;
-    min-width: 470px;
+    min-width: 300px;
     margin: 10px;
 }
 
@@ -75,12 +75,14 @@ button.our-story-style {
 section.flex-item:nth-child(2) {
     display: flex;
     justify-content: center;
-    margin-top: 15px;
+    width: 100%;
+    margin-right: 15px;
+    margin-left: 15px;
 }
 
 h2.features {
     text-align: center;
-    min-width: 95%;
+    min-width: 100%;
     margin-bottom: 5px;
     padding-top: 10px;
     padding-bottom: 12px;  
@@ -107,11 +109,15 @@ section.flex-item:nth-child(3) {
     text-align: center;
     justify-content: center;
     margin-top: 20px;
+    width: 100%;
+    margin-right: 15px;
+    margin-left: 15px;
+
 }
 
 h2.why-trackgenix {
     text-align: center;
-    min-width: 95%;
+    min-width: 100%;
     margin-bottom: 10px;
     padding-bottom: 12px;
     padding-top: 10px; 
@@ -122,8 +128,10 @@ h2.why-trackgenix {
 div.flex-why-trackgenix {
     display: flex;
     flex-wrap: wrap;
+    width: 95%;
     justify-content: center;
     padding: 7px 0px 7px 0px;
+    margin-bottom: 12px;
     border-bottom: 1px solid #373867;
 }
 
@@ -134,14 +142,14 @@ div.flex-why-trackgenix:nth-child(odd) {
 img.why-trackgenix {
     width: 48%;
     border-radius: 10px;
-    min-width: 470px;
     margin: 10px;
+    min-width: 250px;
 }
 
 div.why-trackgenix-text {
     width: 48%;
-    min-width: 470px;
     margin: 10px;
+    min-width: 250px;
 }
 
 button.why-trackgenix-style {
@@ -160,13 +168,14 @@ section.flex-item:nth-child(4) {
     justify-content: center;
     text-align: center;
     width: 100%;
-    margin-bottom: 15px;
-    margin-top: 20px;
+    margin-right: 15px;
+    margin-left: 15px;
+    margin-bottom: 10px;
 }
 
 h2.contact-us {
     text-align: center;
-    min-width: 95%;
+    min-width: 100%;
     margin-bottom: 10px;
     padding-bottom: 12px;
     padding-top: 10px; 
@@ -181,7 +190,8 @@ section.contact-us {
 
 input.contact-us {
     display: block;
-    width: 400px;
+    width: 90%;
+    min-width: 250px;
     margin: 1px 0px 12px 0px;
     padding: 10px;
     border: 0.60px solid #37386733;
@@ -191,7 +201,8 @@ input.contact-us {
 
 select.contact-us {
     display: block;
-    width: 422px;
+    width: 100%;
+    min-width: 250px;
     margin: 1px 0px 12px 0px;
     padding: 10px;
     border: 0.60px solid #37386733;
@@ -203,7 +214,8 @@ select.contact-us {
 
 textarea.contact-us {
     display: block;
-    min-width: 400px;
+    width: 90%;
+    min-width: 250px;
     padding: 10px;
     margin: 18px 0px 12px 0px;
     border: 0.60px solid #37386733;
