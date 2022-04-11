@@ -3,7 +3,64 @@ aside {
     position: fixed;
     left: 0px;
     top: 0px;
-    width: 303.54px;
+    width: 303px;
     height: 100%;
     background-color: #B1B2B6;
+}
+
+form.nav {
+    text-align: center;
+}
+
+h4.menu, h4.get-in-touch {
+    margin: 0px 0px 8px 0px;
+    padding-bottom: 8px;
+    border-bottom: 3px solid #49a37ac9;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+input.search {
+    display: inline-block;
+    padding: 10px 20px 10px 20px;
+    margin: 8% 7% 7% 7%;
+    border: 0.60px solid #37386733;
+    border-radius: 3px;
+    font-size: 16px;
+    color: #3738670a;
+}
+
+input.log-in-button-style {
+    display: inline-block;
+    padding: 12px 25px 12px 25px;
+    margin-right: 3px;
+    border: none;
+    border-radius: 11.24px;
+    background-color: #49A37B;
+    text-transform: uppercase;  
+    text-decoration: none;
+    font-size:12px;
+    color: #ffffff;
+}
+
+input.sign-in-button-style {
+    display: inline-block;
+    padding: 12px 25px 12px 25px;
+    border: none;
+    border-radius: 11.24px;
+    background-color: #56577C;
+    font-size:12px;
+    text-transform: uppercase;
+    text-decoration: none;
+    color: #ffffff;
+}
+
+div.menu {
+    margin: 25% 7% 0% 7%;
+    line-height: 20px;
+}
+
+div.get-in-touch {
+    margin: 60% 7% 0% 7%;
+    line-height: 20px;
 }

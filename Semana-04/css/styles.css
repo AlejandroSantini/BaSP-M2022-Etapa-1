@@ -81,3 +81,46 @@ input.sign-in-button-style:hover {
 input.sign-in-button-style:active {
     background-color: #37386727;
 }
+
+@media only screen and (min-width: 480px) {
+    /*for mobile*/
+    body {
+        
+    }
+}
+
+@media only screen and (min-width: 768px) {
+    /*for tablet*/
+    body {
+
+    }
+        
+} 
+
+@media only screen and (min-width: 1024px) {
+    /*for desktop*/
+
+    body.especify {
+        margin-left: 303px;
+    }
+
+    body header, body footer, body main {
+        overflow: hidden;
+    }
+
+    footer h3.trackgenix {
+        display: flex;
+    }
+
+    div.products, div.company, div.suport {
+        width: 20%;
+    }
+
+    body aside {
+        display: flex;
+    }
+
+    footer div.trackgenix-footer {
+        padding-left: 18%;
+    }
+}   
