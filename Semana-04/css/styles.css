@@ -30,7 +30,6 @@ label {
     display: flex;
     font-weight: bold;
     align-items: flex-start;
-    padding-left: 10px;
 }
 
 a:visited {
@@ -82,24 +81,23 @@ input.sign-in-button-style:active {
     background-color: #37386727;
 }
 
-@media only screen and (min-width: 480px) {
-    /*for mobile*/
-    body {
-        
-    }
-}
-
 @media only screen and (min-width: 768px) {
     /*for tablet*/
-    body {
-
+    img.why-trackgenix-even {
+        order: 1;
     }
-        
+
+    img.flex-our-story {
+        order: -1;
+    }
+
+    section input.contact-us, section select.contact-us, section textarea.contact-us {
+        min-width: 400px;
+    }
 } 
 
 @media only screen and (min-width: 1024px) {
     /*for desktop*/
-
     body.especify {
         margin-left: 303px;
     }
@@ -108,16 +106,30 @@ input.sign-in-button-style:active {
         overflow: hidden;
     }
 
+    main section.flex-item:nth-child(4), header h1.flex-item {
+        justify-content: left;
+        text-align: justify;
+    }
+
+    section h2.features, section h2.why-trackgenix, section h2.contact-us, header h1.flex-item {
+        text-align: justify;
+        padding-left: 10px;
+    }
+
+    div.flex-what-is-trackgenix-text, div.flex-our-story-text {
+        text-align: justify;
+    }
+
+    body aside {
+        display: flex;
+    }
+
     footer h3.trackgenix {
         display: flex;
     }
 
     div.products, div.company, div.suport {
         width: 20%;
-    }
-
-    body aside {
-        display: flex;
     }
 
     footer div.trackgenix-footer {

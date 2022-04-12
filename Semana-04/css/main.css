@@ -1,6 +1,7 @@
 main.flex-container{
     display: flex;
     flex-wrap: wrap;
+    width: 100%;
     margin-right: 15px;
     margin-left: 15px;
 }
@@ -14,6 +15,7 @@ section.flex-item {
 
 section.flex-item:nth-child(1) {
     text-align: center;
+    margin-bottom: 15px;
 }
 
 h2.homepage {
@@ -25,37 +27,43 @@ div.flex-what-is-trackgenix {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+    align-items: center;
 }   
 
 div.flex-what-is-trackgenix-text {
-    width: 48%;
+    width: 45%;
+    min-width: 315px;
     margin: 10px;
-    min-width: 300px;
+    height: auto;
 }
 
 img.flex-what-is-trackgenix {
-    width: 48%;
+    height: max-content;
+    width: 45%;
+    min-width: 330px;
     border-radius: 10px;
     margin: 10px;
-    min-width: 300px;
 }
 
 div.flex-our-story {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+    align-items: center;
 }
 
 div.flex-our-story-text {
-    width: 48%;
-    min-width: 300px;
+    width: 45%;
+    min-width: 330px;
+    height: auto;
     margin: 10px;
 }
 
 img.flex-our-story {
-    width: 48%;
+    height: max-content;
+    width: 45%;
+    min-width: 315px;
     border-radius: 10px;
-    min-width: 300px;
     margin: 10px;
 }
 
@@ -74,7 +82,6 @@ button.our-story-style {
 
 section.flex-item:nth-child(2) {
     display: flex;
-    justify-content: center;
     width: 100%;
     margin-right: 15px;
     margin-left: 15px;
@@ -82,7 +89,7 @@ section.flex-item:nth-child(2) {
 
 h2.features {
     text-align: center;
-    min-width: 100%;
+    min-width: 98%;
     margin-bottom: 5px;
     padding-top: 10px;
     padding-bottom: 12px;  
@@ -91,6 +98,7 @@ h2.features {
 }
 p.features{
     padding: 2px 2.5% 5px 2.5%;
+    text-align: justify;
 }
 
 ul.features {
@@ -112,12 +120,11 @@ section.flex-item:nth-child(3) {
     width: 100%;
     margin-right: 15px;
     margin-left: 15px;
-
 }
 
 h2.why-trackgenix {
     text-align: center;
-    min-width: 100%;
+    min-width: 98%;
     margin-bottom: 10px;
     padding-bottom: 12px;
     padding-top: 10px; 
@@ -133,23 +140,29 @@ div.flex-why-trackgenix {
     padding: 7px 0px 7px 0px;
     margin-bottom: 12px;
     border-bottom: 1px solid #373867;
+    align-items: center;
 }
 
-div.flex-why-trackgenix:nth-child(odd) {
-    
-}
-
-img.why-trackgenix {
-    width: 48%;
+img.why-trackgenix-even {
+    height: max-content;
+    width: 45%;
+    min-width: 294px;
     border-radius: 10px;
     margin: 10px;
-    min-width: 250px;
+}
+
+img.why-trackgenix-odd {
+    height: max-content;
+    width: 45%;
+    min-width: 294px;
+    border-radius: 10px;
+    margin: 10px;
 }
 
 div.why-trackgenix-text {
-    width: 48%;
+    width: 45%;
+    min-width: 293px;
     margin: 10px;
-    min-width: 250px;
 }
 
 button.why-trackgenix-style {
@@ -170,22 +183,22 @@ section.flex-item:nth-child(4) {
     width: 100%;
     margin-right: 15px;
     margin-left: 15px;
-    margin-bottom: 10px;
+    margin-bottom: 2%;
 }
 
 h2.contact-us {
     text-align: center;
-    min-width: 100%;
+    min-width: 98%;
     margin-bottom: 10px;
     padding-bottom: 12px;
-    padding-top: 10px; 
+    padding-top: 20px; 
     border-bottom: 5px solid #373867;
     text-transform: uppercase; 
 }
 
-section.contact-us {
-    text-align: center;
+form.contact-us {
     line-height: 30px;
+    margin: 0px 2.5% 0px 2.5%;
 }
 
 input.contact-us {
