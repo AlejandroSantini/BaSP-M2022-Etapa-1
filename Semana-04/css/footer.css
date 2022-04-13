@@ -7,14 +7,13 @@ footer {
 div.trackgenix-footer {
     display: flex;
     flex-wrap: wrap;
-    /*margin: 2% 10% 2% 30%;*/
     width: 100%;
     padding: 10px 0px 10px 0px;
     justify-content:space-around
 
 }
 
-h3.trackgenix {
+section > h3 {
     display: none;
     margin: 20px 0px 5px 30px;
     text-transform: uppercase;
@@ -22,7 +21,7 @@ h3.trackgenix {
     
 }
 
-p.footer {
+div.trackgenix-footer p {
     font-weight: bold;
 }
 
@@ -32,6 +31,6 @@ div.social-media {
     text-align: center;
 }
 
-a.social-media {
+div.social-media a {
     font-size: 18px;
 }

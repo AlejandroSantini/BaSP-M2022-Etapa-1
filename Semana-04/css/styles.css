@@ -1,16 +1,23 @@
 body {
-    display: flex;
-    flex-flow: row wrap;
     font-size: 15px;
-    color: #373867;
     font-family: 'Roboto', sans-serif;
     line-height: 22px;
-    justify-content: center;
+    color: #373867;
 }
 
 h2 {
     font-size: 30px;
     font-weight: bold;
+}
+
+section > h2 {
+    min-width: 98%;
+    margin-bottom: 5px;
+    padding-top: 10px;
+    padding-bottom: 12px;  
+    border-bottom: 5px solid #373867; 
+    text-align: center;
+    text-transform: uppercase;
 }
 
 h3 {
@@ -28,8 +35,8 @@ input {
 
 label {
     display: flex;
-    font-weight: bold;
     align-items: flex-start;
+    font-weight: bold;
 }
 
 a:visited {
@@ -40,11 +47,11 @@ a:link {
     color: #373867;
 }
 
-a.menu:hover, a.get-in-touch:hover {
+nav a:hover {
     font-weight: bold;
 }
 
-a.menu:active, a.get-in-touch:active {
+nav a:active {
     font-weight: bold;
     color: #3738679a;
 }
@@ -83,18 +90,22 @@ input.sign-in-button-style:active {
 
 @media only screen and (min-width: 768px) {
     /*for tablet*/
-    img.why-trackgenix-even {
-        order: 1;
+    header h1 {
+        font-size: 60px;
     }
 
-    img.flex-our-story {
+    div.our-story img {
         order: -1;
+    }
+
+    img.why-trackgenix-even {
+        order: 1;
     }
 
     section input.contact-us, section select.contact-us, section textarea.contact-us {
         min-width: 400px;
     }
-} 
+}
 
 @media only screen and (min-width: 1024px) {
     /*for desktop*/
@@ -106,29 +117,29 @@ input.sign-in-button-style:active {
         overflow: hidden;
     }
 
-    main section.flex-item:nth-child(4), header h1.flex-item {
+    main section:nth-child(4), body header h1 {
         justify-content: left;
         text-align: justify;
     }
 
-    section h2.features, section h2.why-trackgenix, section h2.contact-us, header h1.flex-item {
+    div.what-is-trackgenix div, div.our-story div {
         text-align: justify;
-        padding-left: 10px;
     }
 
-    div.flex-what-is-trackgenix-text, div.flex-our-story-text {
+    section > h2 {
         text-align: justify;
+        padding-left: 10px;
     }
 
     body aside {
         display: flex;
     }
 
-    footer h3.trackgenix {
+    footer section h3 {
         display: flex;
     }
 
-    div.products, div.company, div.suport {
+    footer section div div {
         width: 20%;
     }
 
@@ -136,3 +147,10 @@ input.sign-in-button-style:active {
         padding-left: 18%;
     }
 }   
+
+@media only screen and (min-width: 1440px) {
+    /*big screens*/
+    body.especify {
+        font-size: 17px;
+    }
+}
