@@ -4,8 +4,6 @@ main {
     width: 100%;
 }
 
-/*----------HOMEPAGE----------*/
-
 main section:nth-child(1) {
     display: flex;
     flex-wrap: wrap;
@@ -73,8 +71,6 @@ button.our-story-style {
     color: #373867;
 }
 
-/*----------FEATURES-----------*/
-
 main section:nth-child(2) {
     display: flex;
     flex-wrap: wrap;
@@ -99,11 +95,10 @@ section ul p {
     font-weight: bold;
 }
 
-/*--------WHY TRACKGENIX--------*/
-
 main section:nth-child(3) {
     display: flex;
     flex-wrap: wrap;
+    justify-content: center;
     width: 100%;
     margin: 20px 15px 0px 15px;
     text-align: center;
@@ -154,7 +149,6 @@ button.why-trackgenix-style {
     font-size: 12px;
     color: #373867;
 }
-/*---------CONTACT US-----------*/
 
 main section:nth-child(4) {
     display: flex;

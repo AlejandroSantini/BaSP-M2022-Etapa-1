@@ -1,17 +1,15 @@
 header {
-    display: flex;
-    justify-content: center;
     width: 100%;
     height: 120px;
+    text-align: center;
 }
 
 header h1 {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    min-width: 95%;
+    display: inline-block;
+    width: 95%;
     border-bottom: 5px solid #373867; 
     font-size: 45px;
     font-weight: bold;
-    margin-bottom: 30px;
+    padding: 35px 0px 35px 0px;
+    padding-left: 10px;
 }

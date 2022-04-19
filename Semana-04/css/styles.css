@@ -39,11 +39,7 @@ label {
     font-weight: bold;
 }
 
-a:visited {
-    color: #373867;
-}
-
-a:link {
+a:visited, a:link {
     color: #373867;
 }
 
@@ -51,7 +47,7 @@ nav a:hover {
     font-weight: bold;
 }
 
-nav a:active {
+nav a:active  {
     font-weight: bold;
     color: #3738679a;
 }
@@ -64,11 +60,11 @@ button.our-story-style:active, button.why-trackgenix-style:active, input.send-me
     background-color: #aace9b67;
 }
 
-input.reset-button-style:hover {
+input.reset-button-style:hover, input.sign-in-button-style:hover {
     background-color: #37386756;
 }
 
-input.reset-button-style:active {
+input.reset-button-style:active, input.sign-in-button-style:active {
     background-color: #37386734;
 }
 
@@ -78,14 +74,6 @@ input.log-in-button-style:hover {
 
 input.log-in-button-style:active {
     background-color: #49a37a3a;
-}
-
-input.sign-in-button-style:hover {
-    background-color: #37386765;
-}
-
-input.sign-in-button-style:active {
-    background-color: #37386727;
 }
 
 @media only screen and (min-width: 768px) {
@@ -132,7 +120,7 @@ input.sign-in-button-style:active {
     }
 
     body aside {
-        display: flex;
+        display: inline-block;
     }
 
     footer section h3 {
@@ -144,7 +132,7 @@ input.sign-in-button-style:active {
     }
 
     footer div.trackgenix-footer {
-        padding-left: 18%;
+        padding-left: 15%;
     }
 }   
 
