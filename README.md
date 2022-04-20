@@ -9,6 +9,10 @@ I made the code in HTML based on the screenshot in the figure.
 Apply CSS to the Week 02 code to style it, without using flexfox and using the figma screenshot as our guide.
 ### Week 04
 Apply CSS with FlexBox, besides optimizing the code and making corrections.
+Github Pages: https://alejandrosantini.github.io/BaSP-M2022-Etapa-1/Semana-04/index.html
+### Week 05
+Javascript exercises.
+Github Pages: https://alejandrosantini.github.io/BaSP-M2022-Etapa-1/Semana-05/index.html
 ## Installation
 ```
 1. Download "Semana-02", "Semana-03" and Semana-04 folder on GitHub.
@@ -24,7 +28,7 @@ Acknowledgment: https://www.makeareadme.com, https://www.w3schools.com/html, htt
 ## Project status
 Finished and under review.
 ## Roadmap
-Apply javascript.
+Continue applying javascript.
 ## Support
 alejandro.j.santini@gmail.com
 
