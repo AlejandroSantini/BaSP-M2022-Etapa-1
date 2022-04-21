@@ -1,0 +1,15 @@
+header {
+    width: 100%;
+    height: 120px;
+    text-align: center;
+}
+
+header h1 {
+    display: inline-block;
+    width: 95%;
+    border-bottom: 5px solid #373867; 
+    font-size: 45px;
+    font-weight: bold;
+    padding: 35px 0px 35px 0px;
+    padding-left: 10px;
+}

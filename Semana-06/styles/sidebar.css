@@ -1,0 +1,65 @@
+aside {
+    display: none;
+    position: fixed;
+    box-sizing: border-box;
+    left: 0px;
+    top: 0px;
+    width: 303px;
+    height: 100%;
+    background-color: #B1B2B6;
+}
+
+form {
+    text-align: center;
+}
+
+nav > div {
+    margin-left: 30px;
+    margin-right: 30px;
+    padding-top: 14%;
+    line-height: 20px;
+}
+
+nav div h4 {
+    margin: 0px 0px 8px 0px;
+    padding-bottom: 8px;
+    border-bottom: 3px solid #49a37ac9;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+div.get-in-touch {
+    margin-top: 18%;
+}
+
+input.search {
+    padding: 10px 20px 10px 20px;
+    margin: 9% 0% 6% 0%;
+    border: 0.60px solid #37386733;
+    border-radius: 3px;
+    font-size: 16px;
+    color: #3738670a;
+}
+
+a.login-button-style {
+    padding: 12px 25px 12px 25px;
+    margin-right: 3px;
+    border: none;
+    border-radius: 11px;
+    background-color: #49A37B;
+    text-transform: uppercase;  
+    text-decoration: none;
+    font-size:12px;
+    color: #ffffff;
+}
+
+a.sign-up-button-style {
+    padding: 12px 25px 12px 25px;
+    border: none;
+    border-radius: 11px;
+    background-color: #56577C;
+    font-size:12px;
+    text-transform: uppercase;
+    text-decoration: none;
+    color: #ffffff;
+}
