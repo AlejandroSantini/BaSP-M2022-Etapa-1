@@ -1,0 +1,65 @@
+main {
+    display: flex;
+    justify-content: center;
+}
+
+main > div {
+    width: 50%;
+    min-width: 300px;
+    margin: 5% 0% 7% 0%;
+    border-radius: 3px;
+    box-shadow: 0px 0px 7px #58587E;
+    text-align: center;
+}
+
+h2 {
+    display: block;
+    box-sizing: border-box;
+    padding: 5%;
+    background-color: #AACE9B;
+}
+
+div > form {
+    display: inline-block;
+    padding: 8% 0% 8% 0%;
+    box-sizing: border-box;
+    width: 100%;
+}
+
+form > div {
+    width: 80%;
+    margin: auto;
+}
+
+input.email, input.password {
+    display: block;
+    box-sizing: border-box;
+    width: 100%;
+    min-width: 250px;
+    margin: 1px auto 10px auto;
+    padding: 10px;
+    border: 0.60px solid #37386733;
+    border-radius: 3px;
+    font-size: 15px;
+}
+
+input.login-button-style {
+    display: block;
+    min-width: 250px;
+    margin: 12px auto 6px auto;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: #AACE9B;
+    font-weight: bold;
+    font-size: 17px;
+    font-weight: bold;
+    color: #373867CC;
+}
+
+
+
+main p {
+    display: inline-block;
+}
+

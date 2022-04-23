@@ -43,11 +43,11 @@ a:visited, a:link {
     color: #373867;
 }
 
-li a:hover {
+li a:hover, form a:hover {
     font-weight: bold;
 }
 
-li a:active  {
+li a:active, form a:active  {
     font-weight: bold;
     color: #3738679a;
 }
