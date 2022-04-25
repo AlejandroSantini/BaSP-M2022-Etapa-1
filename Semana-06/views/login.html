@@ -34,24 +34,29 @@
         <main>
             <div>
                 <h2>Login</h2>
-                <form>
+                <form class="login-form">
                     <div>
                         <div>
-                            <label>Email</label>
-                            <input class="email" type="email" placeholder="example@gmail.com">  
-                            <label>Password</label>
-                            <input class="password" type="password" placeholder="*********">
-                        </div>  
+                            <div>
+                                <label for="email">Email</label>
+                                <input id="email" type="text" name="email" placeholder="example@gmail.com">
+                                <div>
+                            </div>
+                                <label for="password">Password</label>
+                                <input id="password" type="text" name="email" placeholder="*********">
+                            </div>
+                        </div> 
                         <div>
                             <input class="checkbox" type="checkbox">
                             <p>Remember me</p>
                         </div>
                     </div>
                     <div>
-                        <input class="login-button-style" type="submit" value="Login">
+                        <button id="submit" type="submit">Login</button>
                         <a>Forgot password?</a>
                     </div>
                 </form>
+                <p class="warning"></p> 
             </div>
         </main>
         <aside>
