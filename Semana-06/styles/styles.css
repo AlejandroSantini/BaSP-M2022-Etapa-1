@@ -52,11 +52,11 @@ li a:active, form a:active  {
     color: #3738679a;
 }
 
-button.our-story-style:hover, button.why-trackgenix-style:hover, input.send-message-button-style:hover {
+button.our-story-style:hover, button.why-trackgenix-style:hover, input.send-message-button-style:hover, #submit:hover {
     background-color: #aace9b86;
 }
 
-button.our-story-style:active, button.why-trackgenix-style:active, input.send-message-button-style:active {
+button.our-story-style:active, button.why-trackgenix-style:active, input.send-message-button-style:active, #submit:active{
     background-color: #aace9b67;
 }
 

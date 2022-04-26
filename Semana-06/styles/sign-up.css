@@ -34,7 +34,7 @@ div > form {
     width: 100%;
 }
 
-div.data input {
+.box input {
     display: block;
     box-sizing: border-box;
     width: 100%;
@@ -58,4 +58,19 @@ div.data input {
     font-size: 17px;
     font-weight: bold;
     color: #373867CC;
+}
+
+.error-message {
+    visibility: hidden;
+    font-size: 12px;
+    text-align: start;
+    color: #f10000;
+}
+
+form .name-box-error-i, form .surname-box-error-i, form .dni-box-error-i, form .birth-date-box-error-i, form .phone-box-error-i, 
+form .address-box-error-i, form .location-box-error-i, form .email-box-error-i, 
+form .password-box-error-i, form .postal-code-box-error-i, form .password2-box-error-i  {
+    color: #f10000;
+    border: 2px solid #f10000;
+    box-sizing: border-box;
 }

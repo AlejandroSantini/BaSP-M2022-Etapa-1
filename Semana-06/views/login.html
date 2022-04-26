@@ -23,7 +23,6 @@
         <link rel="stylesheet" type="text/css" href="../styles/sidebar.css" />
         <link rel="stylesheet" type="text/css" href="../styles/footer.css" />
         <link rel="stylesheet" type="text/css" href="../styles/login.css" />
-        <script src="../javascript/contact.js"></script>
         <script src="../javascript/login.js"></script>
         <title>Trackgenix</title>
     </head>
@@ -34,29 +33,30 @@
         <main>
             <div>
                 <h2>Login</h2>
-                <form class="login-form">
+                <form>
                     <div>
                         <div>
+                            <div class="box">
+                                <label class="error-color" for="email">Email</label>
+                                <input id="email" type="text" placeholder="example@gmail.com">
+                                <p class="error-message">Email required!</p>
                             <div>
-                                <label for="email">Email</label>
-                                <input id="email" type="text" name="email" placeholder="example@gmail.com">
-                                <div>
-                            </div>
-                                <label for="password">Password</label>
-                                <input id="password" type="text" name="email" placeholder="*********">
+                            </div class="box">
+                                <label class="error-color" for="password">Password</label>
+                                <input id="password" type="text" placeholder="*********">
+                                <p class="error-message">Password required!</p>
                             </div>
                         </div> 
                         <div>
-                            <input class="checkbox" type="checkbox">
-                            <p>Remember me</p>
+                            <input id="checkbox" type="checkbox">
+                            <label class="checkbox" for="checkbox">Remember me</label>
                         </div>
                     </div>
                     <div>
                         <button id="submit" type="submit">Login</button>
                         <a>Forgot password?</a>
                     </div>
-                </form>
-                <p class="warning"></p> 
+                </form> 
             </div>
         </main>
         <aside>

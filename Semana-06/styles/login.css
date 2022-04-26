@@ -28,26 +28,23 @@ form > div {
     margin: auto;
 }
 
-#email, #password {
+.box input {
     display: block;
     box-sizing: border-box;
     width: 100%;
     min-width: 250px;
-    margin: 1px auto 10px auto;
+    margin: 1px auto 1px auto;
     padding: 10px;
     border: 0.60px solid #37386733;
     border-radius: 3px;
     font-size: 15px;
 }
 
-#email input, #email label {
-    border-color: #f10000;
+.error-message {
+    visibility: hidden;
+    font-size: 12px;
+    text-align: start;
     color: #f10000;
-}
-
-#password input, #password label {
-    color: #f10000;
-    border-color: #f10000;
 }
 
 #submit {
@@ -64,9 +61,13 @@ form > div {
     color: #373867CC;
 }
 
-
-
-main p {
+.checkbox {
     display: inline-block;
+    font-weight: normal;
 }
 
+form .email-box-error-i, form .password-box-error-i {
+    color: #f10000;
+    border: 2px solid #f10000;
+    box-sizing: border-box;
+}
