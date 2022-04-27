@@ -1,4 +1,7 @@
 window.onload = function() {
+
+    //Get inputs
+
     var button = document.getElementById('submit');
     var inputName = document.getElementById('name');
     var inputSurname = document.getElementById('surname');
@@ -24,6 +27,8 @@ window.onload = function() {
     var passwordValidationRes;
     var password2ValidationRes;
 
+    //Add focus and blur events
+
     inputName.addEventListener('blur', nameValidator);
     inputSurname.addEventListener('blur', surnameValidator);
     inputDni.addEventListener('blur', dniValidator);
@@ -47,6 +52,8 @@ window.onload = function() {
     inputPassword.addEventListener('focus', passwordFocus);
     inputPassword2.addEventListener('focus', password2Focus)
     button.addEventListener('click', buttonSubmit);
+
+    //Functions to make focus
 
     function nameFocus(e) {
         e.preventDefault();
@@ -125,9 +132,77 @@ window.onload = function() {
         document.getElementsByClassName('error-color')[10].style.color = '#373867';
     }
 
+    //Functions for internal validations
+
+    var letters = 'abcdefghyjklmnñopqrstuvwxyz';
+    function hasLetter(string) {
+        string = string.toLowerCase();
+        for (i=0; i<string.length; i++) {
+           if (letters.indexOf(string.charAt(i),0)!=-1) {
+              return true;
+            }
+        }
+        return false;
+    }
+
+    function hasMoreThreeLetters(string) {
+        string = string.toLowerCase();
+        var amount = 0;
+        for (i=0; i<string.length; i++) {
+           if (letters.includes(string[i])) {
+                amount++;
+            }
+        }
+        return (amount > 3);
+    }
+
+    function hasFiveLetters(string) {
+        string = string.toLowerCase();
+        var amount = 0;
+        for (i=0; i<string.length; i++) {
+           if (letters.includes(string[i])) {
+                amount++;
+            }
+        }
+        return (amount >= 5);
+    }
+
+    var numbers = '0123456789';
+    function hasNumber(string) {
+        string = string.toLowerCase();
+        for (i=0; i<string.length; i++) {
+           if (numbers.indexOf(string.charAt(i),0)!=-1) {
+              return true;
+            }
+        }
+        return false;
+    }
+
+    var space = ' ';
+    function hasSpace(string) {
+        string = string.toLowerCase();
+        for (i=0; i<string.length; i++) {
+           if (space.includes(string[i])) {
+              return true;
+            }
+        }
+        return false;
+    }
+
+    function onlyLetters(string) {
+        var stringValidator = true;
+        for (var i=0; i<string.length; i++) {
+            stringArray = string;
+            stringValidator = stringValidator && (stringArray[i].toLowerCase() !== stringArray[i].toUpperCase());
+        }
+        return stringValidator;
+    }
+
+    //Functions to validate inputs and make blur
+
     function nameValidator(e) {
         e.preventDefault();
-        if (inputName.value == 'ale') {
+        if (inputName.value.length >= 3 && onlyLetters(inputName.value) == true) {
             nameValidationRes = inputName.value + '   | Valid name |';
             return true;
         } else {
@@ -141,7 +216,7 @@ window.onload = function() {
 
     function surnameValidator(e) {
         e.preventDefault();
-        if (inputSurname.value == 'ale') {
+        if (inputSurname.value.length >= 3 && onlyLetters(inputSurname.value) == true) {
             surnameValidationRes = inputSurname.value + '   | Valid surname |';
             return true;
         } else {
@@ -152,10 +227,10 @@ window.onload = function() {
             return false;
         }
     }
-
+ 
     function dniValidator(e) {
         e.preventDefault();
-        if (inputDni.value == 'ale') {
+        if (inputDni.value.length >= 7 && Number(inputDni.value) == inputDni.value) {
             dniValidationRes = inputDni.value + '   | Valid dni |';
             return true;
         } else {
@@ -169,7 +244,7 @@ window.onload = function() {
 
     function birthDateValidator(e) {
         e.preventDefault();
-        if (inputBirthDate.value == 'ale') {
+        if ((new Date(inputBirthDate.value)) <= new Date()) {
             birthDateValidationRes = inputBirthDate.value + '   | Valid birth date |';
             return true;
         } else {
@@ -183,12 +258,12 @@ window.onload = function() {
 
     function phoneValidator(e) {
         e.preventDefault();
-        if (inputPhone.value == 'ale') {
+        if (inputPhone.value.length == 10 && Number(inputPhone.value) == inputPhone.value) {
             phoneValidationRes = inputPhone.value + '   | Valid phone |';
             return true;
         } else {
             phoneValidationRes = inputPhone.value + '   | Incomplete or invalid phone! |';
-            inputPhone.classList.add('birth-date-box-error-i');
+            inputPhone.classList.add('phone-box-error-i');
             document.getElementsByClassName('error-message')[4].style.visibility = 'visible';
             document.getElementsByClassName('error-color')[4].style.color = '#f10000';
             return false;
@@ -197,7 +272,7 @@ window.onload = function() {
 
     function addressValidator(e) {
         e.preventDefault();
-        if (inputAddress.value == 'ale') {
+        if (hasFiveLetters(inputAddress.value) == true &&  hasNumber(inputAddress.value) == true && hasSpace(inputAddress.value) == true) {
             addressValidationRes = inputAddress.value + '   | Valid address |';
             return true;
         } else {
@@ -211,7 +286,7 @@ window.onload = function() {
 
     function locationValidator(e) {
         e.preventDefault();
-        if (inputLocation.value == 'ale') {
+        if (hasNumber(inputLocation.value) == true && hasMoreThreeLetters(inputLocation.value) == true) {
             locationValidationRes = inputLocation.value + '   | Valid location |';
             return true;
         } else {
@@ -225,7 +300,7 @@ window.onload = function() {
 
     function postalCodeValidator(e) {
         e.preventDefault();
-        if (inputPostalCode.value == 'ale') {
+        if ((inputPostalCode.value.length == 4 || inputPostalCode.value.length == 5) && Number(inputPostalCode.value) == inputPostalCode.value) {
             postalCodeValidationRes = inputPostalCode.value + '   | Valid postal code |';
             return true;
         } else {
@@ -239,7 +314,7 @@ window.onload = function() {
 
     function emailValidator(e) {
         e.preventDefault();
-        if (inputEmail.value == 'ale') {
+        if (/[a-z0-9]+@[a-z]+\.[a-z]{2,3}/.test(inputEmail.value) == true) {
             emailValidationRes = inputEmail.value + '   | Valid email |';
             return true;
         } else {
@@ -253,7 +328,7 @@ window.onload = function() {
 
     function passwordValidator(e) {
         e.preventDefault();
-        if (inputPassword2.value == '123') {
+        if (inputPassword.value.length >= 8 && hasNumber(inputPassword.value) == true && hasLetter(inputPassword.value) == true) {
             passwordValidationRes = inputPassword.value + '  | Valid pasword |';
             return true;
         } else {
@@ -267,7 +342,7 @@ window.onload = function() {
 
     function password2Validator(e) {
         e.preventDefault();
-        if (inputPassword2.value == '123') {
+        if (inputPassword2.value == inputPassword.value) {
             password2ValidationRes = inputPassword2.value + '  | Valid pasword |';
             return true;
         } else {

@@ -18,7 +18,7 @@ main > div {
 }
 
 h2 {
-    padding: 5%;
+    padding: 3.5% 5%;
     background-color: #AACE9B;
 }
 
@@ -30,8 +30,8 @@ div.data div {
 div > form {
     display: inline-block;
     padding: 8% 0% 8% 0%;
-    box-sizing: border-box;
     width: 100%;
+    box-sizing: border-box;
 }
 
 .box input {
@@ -70,7 +70,7 @@ div > form {
 form .name-box-error-i, form .surname-box-error-i, form .dni-box-error-i, form .birth-date-box-error-i, form .phone-box-error-i, 
 form .address-box-error-i, form .location-box-error-i, form .email-box-error-i, 
 form .password-box-error-i, form .postal-code-box-error-i, form .password2-box-error-i  {
-    color: #f10000;
     border: 2px solid #f10000;
+    color: #f10000;
     box-sizing: border-box;
 }

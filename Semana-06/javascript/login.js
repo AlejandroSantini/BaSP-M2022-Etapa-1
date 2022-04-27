@@ -1,4 +1,6 @@
 window.onload = function() {
+    //Get inputs
+    
     var button = document.getElementById('submit');
     var inputEmail = document.getElementById('email');
     var inputPassword = document.getElementById('password');
@@ -6,11 +8,15 @@ window.onload = function() {
     var emailValidationRes;
     var passwordValidationRes;
 
+    //Add focus and blur events
+
     inputEmail.addEventListener('blur', emailValidator);
     inputPassword.addEventListener('blur', passwordValidator);
     inputEmail.addEventListener('focus', emailFocus);
     inputPassword.addEventListener('focus', passwordFocus);
     button.addEventListener('click', buttonSubmit);
+
+    //Functions to make focus
 
     function emailFocus(e) {
         e.preventDefault();
@@ -26,9 +32,35 @@ window.onload = function() {
         document.getElementsByClassName('error-color')[1].style.color = '#373867';
     }
 
+    //Functions for internal validations
+
+    var letters = 'abcdefghyjklmnñopqrstuvwxyz';
+    function hasLetter(string) {
+        string = string.toLowerCase();
+        for (i=0; i<string.length; i++) {
+           if (letters.indexOf(string.charAt(i),0)!=-1) {
+              return true;
+            }
+        }
+        return false;
+    }
+    
+    var numbers = '0123456789';
+    function hasNumber(string) {
+        string = string.toLowerCase();
+        for (i=0; i<string.length; i++) {
+           if (numbers.indexOf(string.charAt(i),0)!=-1) {
+              return true;
+            }
+        }
+        return false;
+    }
+
+    //Functions to validate inputs and make blur
+
     function emailValidator(e) {
         e.preventDefault();
-        if (inputEmail.value == 'ale') {
+        if (/[a-z0-9]+@[a-z]+\.[a-z]{2,3}/.test(inputEmail.value) == true) {
             emailValidationRes = inputEmail.value + '   | Valid email |';
             return true;
         } else {
@@ -42,7 +74,7 @@ window.onload = function() {
 
     function passwordValidator(e) {
         e.preventDefault();
-        if (inputPassword.value == '123') {
+        if (inputPassword.value.length >= 8 && hasNumber(inputPassword.value) == true && hasLetter(inputPassword.value)) {
             passwordValidationRes = inputPassword.value + '  | Valid pasword |';
             return true;
         } else {
