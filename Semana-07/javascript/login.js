@@ -99,5 +99,24 @@ window.onload = function() {
         } else {
             alert('Data required!');
         }
-    }      
+    }   
+    
+    fetch('https://basp-m2022-api-rest-server.herokuapp.com/login?email= + inputEmail.value + '&password=' + inputPassword.value)
+        .then(function (response) {
+            return response.json();
+        })
+        .then(function (jsonResponse) {
+            console.log("json", jsonResponse)
+            if (jsonResponse.success) {
+                console.log("Good", jsonResponse);
+            //LÓGICA CUANDO LA REQUEST ES EXITOSA Y MOSTRAR UN ALERT 
+            } else {
+                throw jsonResponse;
+            }
+        })
+        .catch(function (error) {
+            console.warn('Error', error);       
+            //LÓGICA CUANDO LA REQUEST SALE MAL 
+        })
+
 }
