@@ -1,0 +1,144 @@
+body {
+    font-size: 15px;
+    font-family: 'Roboto', sans-serif;
+    line-height: 22px;
+    color: #373867;
+}
+
+h2 {
+    font-size: 30px;
+    font-weight: bold;
+}
+
+section > h2 {
+    min-width: 98%;
+    margin-bottom: 5px;
+    padding-top: 10px;
+    padding-bottom: 12px;  
+    border-bottom: 5px solid #373867; 
+    text-align: center;
+    text-transform: uppercase;
+}
+
+h3 {
+    font-weight: bold;
+}
+
+a {
+    text-decoration: none;
+}
+
+input {
+    text-decoration: none;
+    font-family: 'Roboto', sans-serif;
+}
+
+label {
+    display: flex;
+    align-items: flex-start;
+    font-weight: bold;
+}
+
+a:visited, a:link {
+    color: #373867;
+}
+
+li a:hover, form a:hover {
+    font-weight: bold;
+}
+
+li a:active, form a:active  {
+    font-weight: bold;
+    color: #3738679a;
+}
+
+button.our-story-style:hover, button.why-trackgenix-style:hover, input.send-message-button-style:hover, #submit:hover {
+    background-color: #aace9b86;
+}
+
+button.our-story-style:active, button.why-trackgenix-style:active, input.send-message-button-style:active, #submit:active{
+    background-color: #aace9b67;
+}
+
+input.reset-button-style:hover, a.sign-up-button-style:hover {
+    background-color: #37386756;
+}
+
+button.reset-button-style:active, a.sign-up-button-style:active {
+    background-color: #37386734;
+}
+
+a.login-button-style:hover {
+    background-color: #49a37a80;
+}
+
+a.login-button-style:active {
+    background-color: #49a37a3a;
+}
+
+@media only screen and (min-width: 768px) {
+    /*for tablet*/
+    header h1 {
+        font-size: 60px;
+    }
+
+    div.our-story img {
+        order: -1;
+    }
+
+    img.why-trackgenix-even {
+        order: 1;
+    }
+
+    section input.contact-us, section select.contact-us, section textarea.contact-us {
+        min-width: 400px;
+    }
+}
+
+@media only screen and (min-width: 1024px) {
+    /*for desktop*/
+    body.especify {
+        margin-left: 303px;
+    }
+
+    body header, body footer, body main {
+        overflow: hidden;
+    }
+
+    body main section:nth-child(4), body header h1 {
+        justify-content: left;
+        text-align: justify;
+    }
+
+    div.what-is-trackgenix div, div.our-story div {
+        text-align: justify;
+    }
+
+    section > h2 {
+        text-align: justify;
+        padding-left: 10px;
+    }
+
+    body aside {
+        display: inline-block;
+    }
+
+    footer section h3 {
+        display: flex;
+    }
+
+    footer section div div {
+        width: 20%;
+    }
+
+    footer div.trackgenix-footer {
+        padding-left: 15%;
+    }
+}   
+
+@media only screen and (min-width: 1440px) {
+    /*big screens*/
+    body.especify {
+        font-size: 17px;
+    }
+}
