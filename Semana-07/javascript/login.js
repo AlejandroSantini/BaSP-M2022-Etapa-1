@@ -86,6 +86,10 @@ window.onload = function() {
         }
     }
 
+    function validationResult() {
+        return true;
+    }
+
     function buttonSubmit(e) {
         e.preventDefault();
         if (emailValidator(e) == true || passwordValidator(e) == true) {
@@ -98,25 +102,25 @@ window.onload = function() {
             alert('Email: ' + emailValidationRes + '\n' + 'Password: ' + passwordValidationRes);
         } else {
             alert('Data required!');
-        }
+        } if (validationResult()) {
+            fetch('https://basp-m2022-api-rest-server.herokuapp.com/login?email=' + inputEmail.value + '&password=' + inputPassword.value)
+                .then(function (response) {
+                    return response.json();
+                })
+                .then(function (jsonResponse) {
+                    jsonResponseMsg = jsonResponse.msg;
+                    console.log("json", jsonResponse)
+                    if (jsonResponse.success) {
+                        console.log("Good", jsonResponse);
+                        alert('The request was made correctly.' + '\n' + 'Response: ' + jsonResponseMsg);
+                    } else {
+                        throw jsonResponse;
+                    }
+                })
+                .catch(function (error) {
+                    console.warn('Error', error); 
+                    alert('The request was made incorrectly.' + '\n' + 'Response: ' + jsonResponseMsg);
+                })
+        } 
     }   
-    
-    fetch('https://basp-m2022-api-rest-server.herokuapp.com/login?email= + inputEmail.value + '&password=' + inputPassword.value)
-        .then(function (response) {
-            return response.json();
-        })
-        .then(function (jsonResponse) {
-            console.log("json", jsonResponse)
-            if (jsonResponse.success) {
-                console.log("Good", jsonResponse);
-            //LÓGICA CUANDO LA REQUEST ES EXITOSA Y MOSTRAR UN ALERT 
-            } else {
-                throw jsonResponse;
-            }
-        })
-        .catch(function (error) {
-            console.warn('Error', error);       
-            //LÓGICA CUANDO LA REQUEST SALE MAL 
-        })
-
 }
