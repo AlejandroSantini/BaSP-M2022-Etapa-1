@@ -354,6 +354,10 @@ window.onload = function() {
         }
     }
 
+    function validationResult() {
+        return true;
+    }
+
     function buttonSubmit(e) {
         e.preventDefault();
         alert('Name: ' + nameValidationRes + '\n'
@@ -367,5 +371,25 @@ window.onload = function() {
             + 'Email: ' + emailValidationRes + '\n' 
             + 'Password: ' + passwordValidationRes + '\n'
             + 'Password2: ' + password2ValidationRes);
+        if (validationResult()) {
+            fetch('https://basp-m2022-api-rest-server.herokuapp.com/login?name=' + inputName.value + '&lastName=' + inputSurname.value + '&dni=' + inputDni.value + '&dob=' + inputBirthDate.value + '&phone=' + inputPhone.value + '&address=' + inputAddress.value + '&city=' + inputLocation.value + '&zip=' + inputPostalCode.value + '&Email=' + inputEmail.value + '&password=' + inputPassword.value + '&password2=' + inputPassword2.value)
+                .then(function (response) {
+                    return response.json();
+                })
+                .then(function (jsonResponse) {
+                    jsonResponseMsg = jsonResponse.msg;
+                    console.log("json", jsonResponse)
+                    if (jsonResponse.success) {
+                        console.log("Good", jsonResponse);
+                        alert('The request was made correctly.' + '\n' + 'Response: ' + jsonResponseMsg);
+                    } else {
+                         throw jsonResponse;
+                    }
+                })
+                .catch(function (error) {
+                    console.warn('Error', error); 
+                    alert('The request was made incorrectly.' + '\n' + 'Response: ' + jsonResponseMsg);
+                })
+        }
     }
 }
