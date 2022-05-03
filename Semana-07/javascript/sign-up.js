@@ -197,24 +197,24 @@ window.onload = function() {
         }
         return stringValidator;
     }
-
-    /*function dateFormat(string) {
-        var dateArray = new Date(string.split('-'));
-        var dateToday = new Date();
-        dateArray.splice(1, 2, 'mm');
-        dateArray.splice(2, 1, 'dd');
-        console.log(dateArray);
-        //if (date < dateToday) {
-        //    return mm + '-' + dd + '-' + yyyy;
-        //}
-        
+    
+    function toDateFormat(string) {
+        var dateArray = string.split('/');
+        var dateFormat = dateArray[2] + '-' + dateArray[1] + '-' + dateArray[0];
+        return dateFormat;
     }
-    console.log(dateFormat('04/08/2000'));*/
+
+    function toApiFormat(string) {
+        var dateArray = string.split('-');
+        var apiFormat = dateArray[2] + '/' + dateArray[1] + '/' + dateArray[0];
+        return apiFormat;
+    }
+
     //Functions to validate inputs and make blur
 
     function nameValidator(e) {
         e.preventDefault();
-        if (inputName.value.length >= 3 && onlyLetters(inputName.value) == true) {
+        if (inputName.value.length > 3 && onlyLetters(inputName.value) == true) {
             nameValidationRes = inputName.value + '   | Valid name |';
             return true;
         } else {
@@ -228,7 +228,7 @@ window.onload = function() {
 
     function surnameValidator(e) {
         e.preventDefault();
-        if (inputSurname.value.length >= 3 && onlyLetters(inputSurname.value) == true) {
+        if (inputSurname.value.length > 3 && onlyLetters(inputSurname.value) == true) {
             surnameValidationRes = inputSurname.value + '   | Valid surname |';
             return true;
         } else {
@@ -258,6 +258,7 @@ window.onload = function() {
         e.preventDefault();
         if ((new Date(inputBirthDate.value)) <= new Date()) {
             birthDateValidationRes = inputBirthDate.value + '   | Valid birth date |';
+            console.log('hello');
             return true;
         } else {
             birthDateValidationRes = inputBirthDate.value + '   | Incomplete or invalid birth date! |';
@@ -375,7 +376,7 @@ window.onload = function() {
     }
 
     // Autocomplete code
-
+    //AGREGAR VALIDACION SI LOS INPUT ESTAN VACIOS
     var nameX = localStorage.getItem('name');
     var surnameX = localStorage.getItem('surname');
     var dniX = localStorage.getItem('dni');
@@ -386,6 +387,7 @@ window.onload = function() {
     var postalCodeX = localStorage.getItem('postalCode');
     var emailX = localStorage.getItem('email');
     var passwordX = localStorage.getItem('password');
+    birthDateX = toDateFormat(birthDateX);
     inputName.value = nameX;
     inputSurname.value = surnameX;
     inputDni.value = dniX;
@@ -413,10 +415,11 @@ window.onload = function() {
             + 'Email: ' + emailValidationRes + '\n' 
             + 'Password: ' + passwordValidationRes + '\n'
             + 'Password2: ' + password2ValidationRes);
+        var apiBirthDateFormat = toApiFormat(inputBirthDate.value);
         if (validationResult(e)) {
             fetch('https://basp-m2022-api-rest-server.herokuapp.com/signup?name=' 
             + inputName.value + '&lastName=' + inputSurname.value + '&dni=' + 
-            inputDni.value + '&dob=02/04/2000' + '&phone=' + 
+            inputDni.value + '&dob=' + apiBirthDateFormat + '&phone=' + 
             inputPhone.value + '&address=' + inputAddress.value + '&city=' + 
             inputLocation.value + '&zip=' + inputPostalCode.value + '&email=' + 
             inputEmail.value + '&password=' + inputPassword.value)
