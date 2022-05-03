@@ -109,7 +109,7 @@ window.onload = function() {
                 })
                 .then(function (jsonResponse) {
                     jsonResponseMsg = jsonResponse.msg;
-                    console.log("json", jsonResponse)
+                    console.log("json", jsonResponse);
                     if (jsonResponse.success) {
                         console.log("Good", jsonResponse);
                         alert('The request was made correctly.' + '\n' + 'Response: ' + jsonResponseMsg);

@@ -50,7 +50,7 @@ window.onload = function() {
     inputPostalCode.addEventListener('focus', postalCodeFocus);
     inputEmail.addEventListener('focus', emailFocus);
     inputPassword.addEventListener('focus', passwordFocus);
-    inputPassword2.addEventListener('focus', password2Focus)
+    inputPassword2.addEventListener('focus', password2Focus);
     button.addEventListener('click', buttonSubmit);
 
     //Functions to make focus
@@ -198,6 +198,18 @@ window.onload = function() {
         return stringValidator;
     }
 
+    /*function dateFormat(string) {
+        var dateArray = new Date(string.split('-'));
+        var dateToday = new Date();
+        dateArray.splice(1, 2, 'mm');
+        dateArray.splice(2, 1, 'dd');
+        console.log(dateArray);
+        //if (date < dateToday) {
+        //    return mm + '-' + dd + '-' + yyyy;
+        //}
+        
+    }
+    console.log(dateFormat('04/08/2000'));*/
     //Functions to validate inputs and make blur
 
     function nameValidator(e) {
@@ -354,16 +366,46 @@ window.onload = function() {
         }
     }
 
-    function validationResult() {
+    function validationResult(e) {
+        if (birthDateValidator(e) == true && phoneValidator(e) == true && 
+        addressValidator(e) == true && locationValidator(e) == true && 
+        postalCodeValidator(e) == true && emailValidator(e) == true && 
+        passwordValidator(e) == true && password2Validator(e) == true)
         return true;
     }
+
+    // Autocomplete code
+
+    var nameX = localStorage.getItem('name');
+    var surnameX = localStorage.getItem('surname');
+    var dniX = localStorage.getItem('dni');
+    var birthDateX = localStorage.getItem('birthDate');
+    var phoneX = localStorage.getItem('phone');
+    var addressX = localStorage.getItem('address');
+    var locationX = localStorage.getItem('location');
+    var postalCodeX = localStorage.getItem('postalCode');
+    var emailX = localStorage.getItem('email');
+    var passwordX = localStorage.getItem('password');
+    inputName.value = nameX;
+    inputSurname.value = surnameX;
+    inputDni.value = dniX;
+    inputBirthDate.value = birthDateX;
+    inputPhone.value = phoneX;
+    inputAddress.value = addressX;
+    inputLocation.value = locationX;
+    inputPostalCode.value = postalCodeX;
+    inputEmail.value = emailX;
+    inputPassword.value = passwordX;
+    inputPassword2.value = passwordX;
+
+    // Function for button submit
 
     function buttonSubmit(e) {
         e.preventDefault();
         alert('Name: ' + nameValidationRes + '\n'
             + 'Surname: ' + surnameValidationRes + '\n'
             + 'DNI: ' + dniValidationRes + '\n'
-            + 'Birth daste: ' + birthDateValidationRes + '\n'
+            + 'Birth date: ' + birthDateValidationRes + '\n'
             + 'Phone: ' + phoneValidationRes + '\n'
             + 'Address: ' + addressValidationRes + '\n'
             + 'Location: ' + locationValidationRes + '\n'
@@ -371,16 +413,34 @@ window.onload = function() {
             + 'Email: ' + emailValidationRes + '\n' 
             + 'Password: ' + passwordValidationRes + '\n'
             + 'Password2: ' + password2ValidationRes);
-        if (validationResult()) {
-            fetch('https://basp-m2022-api-rest-server.herokuapp.com/login?name=' + inputName.value + '&lastName=' + inputSurname.value + '&dni=' + inputDni.value + '&dob=' + inputBirthDate.value + '&phone=' + inputPhone.value + '&address=' + inputAddress.value + '&city=' + inputLocation.value + '&zip=' + inputPostalCode.value + '&Email=' + inputEmail.value + '&password=' + inputPassword.value + '&password2=' + inputPassword2.value)
+        if (validationResult(e)) {
+            fetch('https://basp-m2022-api-rest-server.herokuapp.com/signup?name=' 
+            + inputName.value + '&lastName=' + inputSurname.value + '&dni=' + 
+            inputDni.value + '&dob=02/04/2000' + '&phone=' + 
+            inputPhone.value + '&address=' + inputAddress.value + '&city=' + 
+            inputLocation.value + '&zip=' + inputPostalCode.value + '&email=' + 
+            inputEmail.value + '&password=' + inputPassword.value)
                 .then(function (response) {
                     return response.json();
                 })
                 .then(function (jsonResponse) {
                     jsonResponseMsg = jsonResponse.msg;
-                    console.log("json", jsonResponse)
+                    console.log("json", jsonResponse);
                     if (jsonResponse.success) {
                         console.log("Good", jsonResponse);
+                        if (jsonResponse.success == true) {
+                            localStorage.setItem('id', jsonResponse.data.id);
+                            localStorage.setItem('name', jsonResponse.data.name);
+                            localStorage.setItem('surname', jsonResponse.data.lastName);
+                            localStorage.setItem('dni', jsonResponse.data.dni);
+                            localStorage.setItem('birthDate', jsonResponse.data.dob);
+                            localStorage.setItem('phone', jsonResponse.data.phone);
+                            localStorage.setItem('address', jsonResponse.data.address);
+                            localStorage.setItem('location', jsonResponse.data.city);
+                            localStorage.setItem('postalCode', jsonResponse.data.zip);
+                            localStorage.setItem('email', jsonResponse.data.email);
+                            localStorage.setItem('password', jsonResponse.data.password);
+                        }
                         alert('The request was made correctly.' + '\n' + 'Response: ' + jsonResponseMsg);
                     } else {
                          throw jsonResponse;
