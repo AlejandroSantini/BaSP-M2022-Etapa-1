@@ -60,6 +60,9 @@ window.onload = function() {
         inputName.classList.remove('name-box-error-i');
         document.getElementsByClassName('error-message')[0].style.visibility = 'hidden';
         document.getElementsByClassName('error-color')[0].style.color = '#373867';
+        if (inputName.value != '') {
+            document.getElementsByClassName('error-message')[0].textContent="Name required!";
+        }
     }
 
     function surnameFocus(e) {
@@ -67,6 +70,9 @@ window.onload = function() {
         inputSurname.classList.remove('surname-box-error-i');
         document.getElementsByClassName('error-message')[1].style.visibility = 'hidden';
         document.getElementsByClassName('error-color')[1].style.color = '#373867';
+        if (inputSurname.value != '') {
+            document.getElementsByClassName('error-message')[1].textContent="Surname required!";
+        }
     }
 
     function dniFocus(e) {
@@ -74,6 +80,9 @@ window.onload = function() {
         inputDni.classList.remove('dni-box-error-i');
         document.getElementsByClassName('error-message')[2].style.visibility = 'hidden';
         document.getElementsByClassName('error-color')[2].style.color = '#373867';
+        if (inputDni.value != '') {
+            document.getElementsByClassName('error-message')[2].textContent="Dni required!";
+        }
     }
 
     function birthDateFocus(e) {
@@ -81,6 +90,9 @@ window.onload = function() {
         inputBirthDate.classList.remove('birth-date-box-error-i');
         document.getElementsByClassName('error-message')[3].style.visibility = 'hidden';
         document.getElementsByClassName('error-color')[3].style.color = '#373867';
+        if (inputBirthDate.value != '') {
+            document.getElementsByClassName('error-message')[3].textContent="Birth date required!";
+        }
     }
 
     function phoneFocus(e) {
@@ -88,6 +100,9 @@ window.onload = function() {
         inputPhone.classList.remove('phone-box-error-i');
         document.getElementsByClassName('error-message')[4].style.visibility = 'hidden';
         document.getElementsByClassName('error-color')[4].style.color = '#373867';
+        if (inputPhone.value != '') {
+            document.getElementsByClassName('error-message')[4].textContent="Phone required!";
+        }
     }
 
     function addressFocus(e) {
@@ -95,6 +110,9 @@ window.onload = function() {
         inputAddress.classList.remove('address-box-error-i');
         document.getElementsByClassName('error-message')[5].style.visibility = 'hidden';
         document.getElementsByClassName('error-color')[5].style.color = '#373867';
+        if (inputAddress.value != '') {
+            document.getElementsByClassName('error-message')[5].textContent="Address required!";
+        }
     }
 
     function locationFocus(e) {
@@ -102,6 +120,9 @@ window.onload = function() {
         inputLocation.classList.remove('location-box-error-i');
         document.getElementsByClassName('error-message')[6].style.visibility = 'hidden';
         document.getElementsByClassName('error-color')[6].style.color = '#373867';
+        if (inputLocation.value != '') {
+            document.getElementsByClassName('error-message')[6].textContent="Location required!";
+        }
     }
 
     function postalCodeFocus(e) {
@@ -109,6 +130,9 @@ window.onload = function() {
         inputPostalCode.classList.remove('postal-code-box-error-i');
         document.getElementsByClassName('error-message')[7].style.visibility = 'hidden';
         document.getElementsByClassName('error-color')[7].style.color = '#373867';
+        if (inputPostalCode.value != '') {
+            document.getElementsByClassName('error-message')[7].textContent="Postal code required!";
+        }
     }
 
     function emailFocus(e) {
@@ -116,6 +140,9 @@ window.onload = function() {
         inputEmail.classList.remove('email-box-error-i');
         document.getElementsByClassName('error-message')[8].style.visibility = 'hidden';
         document.getElementsByClassName('error-color')[8].style.color = '#373867';
+        if (inputEmail.value != '') {
+            document.getElementsByClassName('error-message')[8].textContent="Email required!";
+        }
     }
 
     function passwordFocus(e) {
@@ -123,6 +150,9 @@ window.onload = function() {
         inputPassword.classList.remove('password-box-error-i');
         document.getElementsByClassName('error-message')[9].style.visibility = 'hidden';
         document.getElementsByClassName('error-color')[9].style.color = '#373867';
+        if (inputPassword.value != '') {
+            document.getElementsByClassName('error-message')[9].textContent="Password required!";
+        }
     }
 
     function password2Focus(e) {
@@ -130,15 +160,18 @@ window.onload = function() {
         inputPassword2.classList.remove('password2-box-error-i');
         document.getElementsByClassName('error-message')[10].style.visibility = 'hidden';
         document.getElementsByClassName('error-color')[10].style.color = '#373867';
+        if (inputPassword2.value != '') {
+            document.getElementsByClassName('error-message')[10].textContent="Repeat password is required!";
+        }
     }
 
-    //Functions for internal validations
+    //Funfctions for internal validations
 
     var letters = 'abcdefghyjklmnñopqrstuvwxyz';
     function hasLetter(string) {
-        string = string.toLowerCase();
-        for (i=0; i<string.length; i++) {
-           if (letters.indexOf(string.charAt(i),0)!=-1) {
+        var stringL = string.toLowerCase();
+        for (i=0; i<stringL.length; i++) {
+           if (letters.includes(stringL[i])) {
               return true;
             }
         }
@@ -146,10 +179,10 @@ window.onload = function() {
     }
 
     function hasMoreThreeLetters(string) {
-        string = string.toLowerCase();
+        var stringL = string.toLowerCase();
         var amount = 0;
-        for (i=0; i<string.length; i++) {
-           if (letters.includes(string[i])) {
+        for (i=0; i<stringL.length; i++) {
+           if (letters.includes(stringL[i])) {
                 amount++;
             }
         }
@@ -157,10 +190,10 @@ window.onload = function() {
     }
 
     function hasFiveLetters(string) {
-        string = string.toLowerCase();
+        var stringL = string.toLowerCase();
         var amount = 0;
-        for (i=0; i<string.length; i++) {
-           if (letters.includes(string[i])) {
+        for (i=0; i<stringL.length; i++) {
+           if (letters.includes(stringL[i])) {
                 amount++;
             }
         }
@@ -169,9 +202,9 @@ window.onload = function() {
 
     var numbers = '0123456789';
     function hasNumber(string) {
-        string = string.toLowerCase();
-        for (i=0; i<string.length; i++) {
-           if (numbers.indexOf(string.charAt(i),0)!=-1) {
+        var stringL = string.toLowerCase();
+        for (i=0; i<stringL.length; i++) {
+           if (numbers.includes(stringL[i])) {
               return true;
             }
         }
@@ -180,9 +213,9 @@ window.onload = function() {
 
     var space = ' ';
     function hasSpace(string) {
-        string = string.toLowerCase();
-        for (i=0; i<string.length; i++) {
-           if (space.includes(string[i])) {
+        var stringL = string.toLowerCase();
+        for (i=0; i<stringL.length; i++) {
+           if (space.includes(stringL[i])) {
               return true;
             }
         }
@@ -222,6 +255,9 @@ window.onload = function() {
             inputName.classList.add('name-box-error-i');
             document.getElementsByClassName('error-message')[0].style.visibility = 'visible';
             document.getElementsByClassName('error-color')[0].style.color = '#f10000';
+            if (inputName.value != '') {
+                document.getElementsByClassName('error-message')[0].textContent="Only letters and must have more than 3 letters!";
+            }
             return false;
         }
     }
@@ -236,6 +272,9 @@ window.onload = function() {
             inputSurname.classList.add('surname-box-error-i');
             document.getElementsByClassName('error-message')[1].style.visibility = 'visible';
             document.getElementsByClassName('error-color')[1].style.color = '#f10000';
+            if (inputSurname.value != '') {
+                document.getElementsByClassName('error-message')[1].textContent="Only letters and must have more than 3 letters!";
+            }
             return false;
         }
     }
@@ -250,6 +289,9 @@ window.onload = function() {
             inputDni.classList.add('dni-box-error-i');
             document.getElementsByClassName('error-message')[2].style.visibility = 'visible';
             document.getElementsByClassName('error-color')[2].style.color = '#f10000';
+            if (inputDni.value != '') {
+                document.getElementsByClassName('error-message')[2].textContent="Must contain more than 7 numbers!";
+            }
             return false;
         }
     }
@@ -258,13 +300,15 @@ window.onload = function() {
         e.preventDefault();
         if ((new Date(inputBirthDate.value)) <= new Date()) {
             birthDateValidationRes = inputBirthDate.value + '   | Valid birth date |';
-            console.log('hello');
             return true;
         } else {
             birthDateValidationRes = inputBirthDate.value + '   | Incomplete or invalid birth date! |';
             inputBirthDate.classList.add('birth-date-box-error-i');
             document.getElementsByClassName('error-message')[3].style.visibility = 'visible';
             document.getElementsByClassName('error-color')[3].style.color = '#f10000';
+            if (inputBirthDate.value != '') {
+                document.getElementsByClassName('error-message')[3].textContent="Must be less than current date!";
+            }
             return false;
         }
     }
@@ -279,6 +323,9 @@ window.onload = function() {
             inputPhone.classList.add('phone-box-error-i');
             document.getElementsByClassName('error-message')[4].style.visibility = 'visible';
             document.getElementsByClassName('error-color')[4].style.color = '#f10000';
+            if (inputPhone.value != '') {
+                document.getElementsByClassName('error-message')[4].textContent="Single number and must have 10 numbers!";
+            }
             return false;
         }
     }
@@ -293,6 +340,9 @@ window.onload = function() {
             inputAddress.classList.add('address-box-error-i');
             document.getElementsByClassName('error-message')[5].style.visibility = 'visible';
             document.getElementsByClassName('error-color')[5].style.color = '#f10000';
+            if (inputAddress.value != '') {
+                document.getElementsByClassName('error-message')[5].textContent="At least 5 letters, numbers and a space!";
+            }
             return false;
         }
     }
@@ -307,6 +357,9 @@ window.onload = function() {
             inputLocation.classList.add('location-box-error-i');
             document.getElementsByClassName('error-message')[6].style.visibility = 'visible';
             document.getElementsByClassName('error-color')[6].style.color = '#f10000';
+            if (inputLocation.value != '') {
+                document.getElementsByClassName('error-message')[6].textContent="Alphanumeric and more than 3 letters!";
+            }
             return false;
         }
     }
@@ -321,6 +374,9 @@ window.onload = function() {
             inputPostalCode.classList.add('postal-code-box-error-i');
             document.getElementsByClassName('error-message')[7].style.visibility = 'visible';
             document.getElementsByClassName('error-color')[7].style.color = '#f10000';
+            if (inputPostalCode.value != '') {
+                document.getElementsByClassName('error-message')[7].textContent="Must have between 4 and 5 numbers!";
+            }
             return false;
         }
     }
@@ -335,6 +391,9 @@ window.onload = function() {
             inputEmail.classList.add('email-box-error-i');
             document.getElementsByClassName('error-message')[8].style.visibility = 'visible';
             document.getElementsByClassName('error-color')[8].style.color = '#f10000';
+            if (inputEmail.value != '') {
+                document.getElementsByClassName('error-message')[8].textContent="Must have a valid email format!";
+            }
             return false;
         }
     }
@@ -349,6 +408,9 @@ window.onload = function() {
             inputPassword.classList.add('password-box-error-i');
             document.getElementsByClassName('error-message')[9].style.visibility = 'visible';
             document.getElementsByClassName('error-color')[9].style.color = '#f10000';
+            if (inputPassword.value != '') {
+                document.getElementsByClassName('error-message')[9].textContent="8 characters, made up of letters and numbers!";
+            }
             return false;
         }
     }
@@ -363,6 +425,9 @@ window.onload = function() {
             inputPassword2.classList.add('password2-box-error-i');
             document.getElementsByClassName('error-message')[10].style.visibility = 'visible';
             document.getElementsByClassName('error-color')[10].style.color = '#f10000';
+            if (inputPassword2.value != '') {
+                document.getElementsByClassName('error-message')[10].textContent="Does not match the old password!";
+            }
             return false;
         }
     }
@@ -371,22 +436,23 @@ window.onload = function() {
         if (birthDateValidator(e) == true && phoneValidator(e) == true && 
         addressValidator(e) == true && locationValidator(e) == true && 
         postalCodeValidator(e) == true && emailValidator(e) == true && 
-        passwordValidator(e) == true && password2Validator(e) == true)
+        passwordValidator(e) == true && password2Validator(e) == true) {
         return true;
+        }
     }
 
     // Autocomplete code
-    //AGREGAR VALIDACION SI LOS INPUT ESTAN VACIOS
-    var nameX = localStorage.getItem('name');
-    var surnameX = localStorage.getItem('surname');
-    var dniX = localStorage.getItem('dni');
-    var birthDateX = localStorage.getItem('birthDate');
-    var phoneX = localStorage.getItem('phone');
-    var addressX = localStorage.getItem('address');
-    var locationX = localStorage.getItem('location');
-    var postalCodeX = localStorage.getItem('postalCode');
-    var emailX = localStorage.getItem('email');
-    var passwordX = localStorage.getItem('password');
+
+    var nameX = localStorage.getItem('name') ? localStorage.getItem('name') : '';
+    var surnameX = localStorage.getItem('surname') ? localStorage.getItem('surname') : '';
+    var dniX = localStorage.getItem('dni') ? localStorage.getItem('dni') : '';
+    var birthDateX = localStorage.getItem('birthDate') ? localStorage.getItem('birthDate') : '';
+    var phoneX = localStorage.getItem('phone') ? localStorage.getItem('phone') : '';
+    var addressX = localStorage.getItem('address') ? localStorage.getItem('address') : '';
+    var locationX = localStorage.getItem('location') ? localStorage.getItem('location') : '';
+    var postalCodeX = localStorage.getItem('postalCode') ? localStorage.getItem('postalCode') : '';
+    var emailX = localStorage.getItem('email') ? localStorage.getItem('email') : '';
+    var passwordX = localStorage.getItem('password') ? localStorage.getItem('password') : '';
     birthDateX = toDateFormat(birthDateX);
     inputName.value = nameX;
     inputSurname.value = surnameX;
@@ -417,8 +483,8 @@ window.onload = function() {
             + 'Password2: ' + password2ValidationRes);
         var apiBirthDateFormat = toApiFormat(inputBirthDate.value);
         if (validationResult(e)) {
-            fetch('https://basp-m2022-api-rest-server.herokuapp.com/signup?name=' 
-            + inputName.value + '&lastName=' + inputSurname.value + '&dni=' + 
+            fetch('https://basp-m2022-api-rest-server.herokuapp.com/signup?name=' + 
+            inputName.value + '&lastName=' + inputSurname.value + '&dni=' + 
             inputDni.value + '&dob=' + apiBirthDateFormat + '&phone=' + 
             inputPhone.value + '&address=' + inputAddress.value + '&city=' + 
             inputLocation.value + '&zip=' + inputPostalCode.value + '&email=' + 

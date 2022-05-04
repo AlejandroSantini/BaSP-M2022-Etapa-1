@@ -23,6 +23,9 @@ window.onload = function() {
         inputEmail.classList.remove('email-box-error-i');
         document.getElementsByClassName('error-message')[0].style.visibility = 'hidden';
         document.getElementsByClassName('error-color')[0].style.color = '#373867';
+        if (inputEmail.value != '') {
+            document.getElementsByClassName('error-message')[0].textContent="Email required!";
+        }
     }
 
     function passwordFocus(e) {
@@ -30,15 +33,18 @@ window.onload = function() {
         inputPassword.classList.remove('password-box-error-i');
         document.getElementsByClassName('error-message')[1].style.visibility = 'hidden';
         document.getElementsByClassName('error-color')[1].style.color = '#373867';
+        if (inputPassword.value != '') {
+            document.getElementsByClassName('error-message')[1].textContent="Password required!";
+        }
     }
 
     //Functions for internal validations
 
     var letters = 'abcdefghyjklmnñopqrstuvwxyz';
     function hasLetter(string) {
-        string = string.toLowerCase();
-        for (i=0; i<string.length; i++) {
-           if (letters.indexOf(string.charAt(i),0)!=-1) {
+        var stringL = string.toLowerCase();
+        for (i=0; i<stringL.length; i++) {
+           if (letters.includes(stringL[i])) {
               return true;
             }
         }
@@ -47,9 +53,9 @@ window.onload = function() {
     
     var numbers = '0123456789';
     function hasNumber(string) {
-        string = string.toLowerCase();
-        for (i=0; i<string.length; i++) {
-           if (numbers.indexOf(string.charAt(i),0)!=-1) {
+        var stringL = string.toLowerCase();
+        for (i=0; i<stringL.length; i++) {
+           if (numbers.includes(stringL[i])) {
               return true;
             }
         }
@@ -68,6 +74,9 @@ window.onload = function() {
             inputEmail.classList.add('email-box-error-i');
             document.getElementsByClassName('error-message')[0].style.visibility = 'visible';
             document.getElementsByClassName('error-color')[0].style.color = '#f10000';
+            if (inputEmail.value != '') {
+                document.getElementsByClassName('error-message')[0].textContent="It must be in a valid email format!";
+            }
             return false;
         }
     }
@@ -82,12 +91,17 @@ window.onload = function() {
             inputPassword.classList.add('password-box-error-i');
             document.getElementsByClassName('error-message')[1].style.visibility = 'visible';
             document.getElementsByClassName('error-color')[1].style.color = '#f10000';
+            if (inputPassword.value != '') {
+                document.getElementsByClassName('error-message')[1].textContent="It must be made up of letters and numbers!";
+            }
             return false;
         }
     }
 
-    function validationResult() {
+    function validationResult(e) {
+        if (emailValidator(e) == true && passwordValidator(e) == true) {
         return true;
+        }
     }
 
     function buttonSubmit(e) {
@@ -102,8 +116,9 @@ window.onload = function() {
             alert('Email: ' + emailValidationRes + '\n' + 'Password: ' + passwordValidationRes);
         } else {
             alert('Data required!');
-        } if (validationResult()) {
-            fetch('https://basp-m2022-api-rest-server.herokuapp.com/login?email=' + inputEmail.value + '&password=' + inputPassword.value)
+        } if (validationResult(e)) {
+            fetch('https://basp-m2022-api-rest-server.herokuapp.com/login?email=' + 
+            inputEmail.value + '&password=' + inputPassword.value)
                 .then(function (response) {
                     return response.json();
                 })
